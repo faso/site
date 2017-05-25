@@ -3019,7 +3019,7 @@
     },
     {
         "name": "onVisibleChanged",
-        "documentation": "The event is fired on changing a question visability.",
+        "documentation": "The event is fired on changing a question visibility.",
         "type": "Event<(sender: SurveyModel, options: any) => any, any>",
         "see": [
             "QuestionBase.visibile",
@@ -3031,7 +3031,7 @@
     },
     {
         "name": "onPageVisibleChanged",
-        "documentation": "The event is fired on changing a page visability.",
+        "documentation": "The event is fired on changing a page visibility.",
         "type": "Event<(sender: SurveyModel, options: any) => any, any>",
         "see": [
             "PageModel.visibile",
@@ -3190,6 +3190,32 @@
         "see": [
             "QuestionMatrixDynamicModel",
             "QuestionMatrixDynamicModel.visibleRows"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onMatrixCellCreated",
+        "documentation": "The event is fired for every cell created in Matrix Dymic and Matrix Dropdown questions.\r\noptions.question - the matrix question\r\noptions.cell - the matrix cell\r\noptions.cellQuestion - the question/editor in the cell. You may customize it, change it's properties, like choices or visible.\r\noptions.rowValue - the value of the current row. To access the value of paticular column use: options.rowValue[\"columnValue\"]\r\noptions.column - the matrix column object\r\noptions.columName - the matrix column name\r\noptions.row - the matrix row object",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "onMatrixCellValueChanged",
+            "QuestionMatrixDynamicModel",
+            "QuestionMatrixDropdownModel"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onMatrixCellValueChanged",
+        "documentation": "The event is fired when cell value is changed in Matrix Dymic and Matrix Dropdown questions.\r\noptions.columName - the matrix column name\r\noptions.value - a new value\r\noptions.row - the matrix row object\r\ngetCellQuestion(columnName) - the function that returns the cell question by column name.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "onMatrixRowAdded",
+            "QuestionMatrixDynamicModel",
+            "QuestionMatrixDropdownModel"
         ],
         "className": "SurveyModel",
         "pmeType": "event",
