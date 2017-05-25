@@ -33,12 +33,12 @@ mainmenukey: doc
                             <img data-bind="visible: pmeType =='method'" src='../images/method_12.svg' width='20px' />
                             <img data-bind="visible: pmeType =='event'" src='../images/bell.svg' width='20px' />
                         </td>
-                        <td>
+                        <td style="padding-right:10px">
                             <a href="#" data-bind="click: showHide" title="More Info...">
                                 <span class="glyphicon" data-bind="css: {'glyphicon-chevron-down': !koExpanded(), 'glyphicon-chevron-up': koExpanded}"></span>
                             </a>
                         </td>
-                        <td style="width:auto">
+                        <td style="width:100%">
                             <a data-bind="click:showHide"><span data-bind="text: name"></span></a>
                             <span data-bind="text: pmeType"></span>
                         </td>
