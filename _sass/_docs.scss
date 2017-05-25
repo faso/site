@@ -1,0 +1,123 @@
+$menu-width: 220px;
+
+.surveyjs-doc-page-wrapper {
+    .doc-page-container {
+        .menu-sidebar {
+            background-color: #2f4050;
+
+            .category-name {
+                color: #a7b1c2;
+                padding: 5px;
+            }
+        }
+
+        .doc-content-wrapper {
+            margin-left: $menu-width;
+
+            a {
+                font-weight: bold;
+            }
+
+            .doc-page-header {
+                background-color: $bg-color-light;
+                font-size: 30px;
+                padding: 20px 30px;
+                color: $text-color;
+            }
+
+            .doc-container {
+                .doc-content {
+                    display: inline-block;
+                    width: 100%;
+                    text-align: left;
+
+                    .initial-block {
+                        padding: 0 0 20px 50px;
+                    }
+
+                    .integration {
+                        padding: 20px 30px;
+                        .navy-line {
+                            padding-top: 0;
+                        }
+                        .steps {
+                            padding-top: 0;
+                        }
+                    }
+
+                    .object-properties {
+                        background-color: $bg-color-light;
+                        padding: 20px 30px;
+                        .filter-search {
+                            margin: 20px 0;
+
+                            .search {
+                                width: 200px;
+                                padding: 0 0 3px 0;
+                            }
+
+                            .filter {
+                                width: 200px;
+
+                                +.select2-container--default .select2-selection--single {
+                                    border-radius: 0;
+
+                                    .select2-selection__arrow {
+                                        background-color: $main-color;
+                                        width: 28px;
+                                        b {
+                                            border-color: $text-color-light transparent;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .table-container {
+                            overflow: auto;
+                            height: 51vh;
+                            border-top: 1px solid $light-border-color;
+
+                            table.table-striped > tbody {
+                                text-align: left;
+
+                                > tr {
+                                    height: 40px;
+
+                                    &:nth-of-type(4n+1) {
+                                        background-color: $bg-color-light;
+                                    }
+                                    &:nth-of-type(4n+2) {
+                                        background-color: $bg-color-light;
+                                    }
+                                    &:nth-of-type(4n+3) {
+                                        background-color: $bg-color;
+                                    }
+                                    &:nth-of-type(4n+4) {
+                                        background-color: $bg-color;
+                                    }
+
+                                    > td {
+                                        padding: 0;
+                                        vertical-align: middle;
+
+                                        &:nth-of-type(1) {
+                                            width: 5%;
+                                            padding-left: 15px;
+                                        }
+                                        &:nth-of-type(3) {
+                                            width: 33%;
+                                        }
+                                        &:nth-of-type(4) {
+                                            width: 20%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>survey.js : {{ page.title }}</title>
+        <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
+        <link href="{{ site.baseurl }}/css/style.css" type="text/css" rel="stylesheet" /> 
+        <link href="{{ site.baseurl }}/css/main.css" type="text/css" rel="stylesheet" />
+        <link href="{{ site.baseurl }}/css/custom-checkbox.css" type="text/css" rel="stylesheet" />
+        {% if page.usedxchart or page.usebootstrap or page.jquery or page.usejquery%}
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>        
+        {% endif %}
+        {% if page.usedxchart%}
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>        
+        <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/15.1.5/js/dx.chartjs.js"></script>
+        {% endif %}
+        {% if page.usebootstrap%}
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        {% endif %}
+        {% if page.usereact%}
+        <script src="https://fb.me/react-0.14.8.js"></script>
+        <script src="https://fb.me/react-dom-0.14.8.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.react.js"></script>
+        {% elsif page.useknockout%}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.ko.js"></script>
+        {% elsif page.usejquery%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.jquery.js"></script>
+        {% elsif page.useangular%}
+        <!-- The stuff Angular 2 needs -->
+
+        <script src="{{ site.baseurl }}/js/angular2/zone.min.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/shim.min.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/Reflect.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/Rx.umd.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/angular.core.umd.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/angular.common.umd.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/angular.compiler.umd.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/angular.platform-browser.umd.js"></script>
+        <script src="{{ site.baseurl }}/js/angular2/angular.platform-browser-dynamic.umd.js"></script>
+
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.angular.js"></script>
+        {% elsif page.usevue%}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.vue.js"></script>
+        {% endif %}
+        <link href="{{ site.baseurl }}/css/prism.css" type="text/css" rel="stylesheet" />
+        <script src="{{ site.baseurl }}/js/prism.js"></script>
+        {% if page.usedevextreme %}
+        <script src="https://cdn3.devexpress.com/jslib/16.2.4/js/dx.all.js"></script>
+        <link href="https://cdn3.devexpress.com/jslib/16.2.4/css/dx.common.css" type="text/css" rel="stylesheet">
+        <link href="https://cdn3.devexpress.com/jslib/16.2.4/css/dx.light.css" type="text/css" rel="stylesheet">
+        {% endif %}
+    </head>
+    <body class="white-bg">
+        {% include menu-top.html %}
+        <div class="maincontent">
+        {{ content }}
+        </div>
+        {% if page.hasFooter%}
+            {% include footer.html %}
+        {% endif %}
+        <script type="text/javascript">               
+            // Analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-74958675-1']);
+            _gaq.push(['_trackPageview']);	
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();             
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,4255 @@
+[
+    {
+        "name": "isValueEmpty",
+        "documentation": "A static methods that returns true if a value underfined, null, empty string or empty array.",
+        "type": "(value: any) => boolean",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "Base",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "Returns the type of the object as a string as it represents in the json.",
+        "type": "() => string",
+        "parameters": [],
+        "className": "Base",
+        "pmeType": "method"
+    },
+    {
+        "name": "text",
+        "documentation": "",
+        "type": "string",
+        "className": "SurveyValidator",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "validate",
+        "documentation": "",
+        "type": "(value: any, name?: string) => ValidatorResult",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "NumericValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "validate",
+        "documentation": "",
+        "type": "(value: any, name?: string) => ValidatorResult",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "NumericValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "TextValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "validate",
+        "documentation": "",
+        "type": "(value: any, name?: string) => ValidatorResult",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "TextValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "RegexValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "validate",
+        "documentation": "",
+        "type": "(value: any, name?: string) => ValidatorResult",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "RegexValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "EmailValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "validate",
+        "documentation": "",
+        "type": "(value: any, name?: string) => ValidatorResult",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "EmailValidator",
+        "pmeType": "method"
+    },
+    {
+        "name": "defaultLocale",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "onRenderedHtmlCallback",
+        "documentation": "",
+        "type": "(html: string) => string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "onGetTextCallback",
+        "documentation": "",
+        "type": "(str: string) => string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "locale",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "text",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "pureText",
+        "documentation": "",
+        "type": "any",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasHtml",
+        "documentation": "",
+        "type": "boolean",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "html",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "textOrHtml",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "renderedHtml",
+        "documentation": "",
+        "type": "string",
+        "className": "LocalizableString",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "getLocaleText",
+        "documentation": "",
+        "type": "(loc: string) => string",
+        "parameters": [
+            {
+                "name": "loc",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "LocalizableString",
+        "pmeType": "method"
+    },
+    {
+        "name": "setLocaleText",
+        "documentation": "",
+        "type": "(loc: string, value: string) => void",
+        "parameters": [
+            {
+                "name": "loc",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "LocalizableString",
+        "pmeType": "method"
+    },
+    {
+        "name": "getJson",
+        "documentation": "",
+        "type": "() => any",
+        "parameters": [],
+        "className": "LocalizableString",
+        "pmeType": "method"
+    },
+    {
+        "name": "setJson",
+        "documentation": "",
+        "type": "(value: any) => void",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "LocalizableString",
+        "pmeType": "method"
+    },
+    {
+        "name": "onChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "LocalizableString",
+        "pmeType": "method"
+    },
+    {
+        "name": "Separator",
+        "documentation": "",
+        "type": "string",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "createArray",
+        "documentation": "",
+        "type": "(locOwner: ILocalizableOwner) => ItemValue[]",
+        "parameters": [
+            {
+                "name": "locOwner",
+                "documentation": "",
+                "type": "ILocalizableOwner"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "setupArray",
+        "documentation": "",
+        "type": "(items: ItemValue[], locOwner: ILocalizableOwner) => void",
+        "parameters": [
+            {
+                "name": "items",
+                "documentation": "",
+                "type": "ItemValue[]"
+            },
+            {
+                "name": "locOwner",
+                "documentation": "",
+                "type": "ILocalizableOwner"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "setData",
+        "documentation": "",
+        "type": "(items: ItemValue[], values: any[]) => void",
+        "parameters": [
+            {
+                "name": "items",
+                "documentation": "",
+                "type": "ItemValue[]"
+            },
+            {
+                "name": "values",
+                "documentation": "",
+                "type": "any[]"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "getData",
+        "documentation": "",
+        "type": "(items: ItemValue[]) => any",
+        "parameters": [
+            {
+                "name": "items",
+                "documentation": "",
+                "type": "ItemValue[]"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "getItemByValue",
+        "documentation": "",
+        "type": "(items: ItemValue[], val: any) => ItemValue",
+        "parameters": [
+            {
+                "name": "items",
+                "documentation": "",
+                "type": "ItemValue[]"
+            },
+            {
+                "name": "val",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "NotifyArrayOnLocaleChanged",
+        "documentation": "",
+        "type": "(items: ItemValue[]) => void",
+        "parameters": [
+            {
+                "name": "items",
+                "documentation": "",
+                "type": "ItemValue[]"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "locText",
+        "documentation": "",
+        "type": "LocalizableString",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "locOwner",
+        "documentation": "",
+        "type": "ILocalizableOwner",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "value",
+        "documentation": "",
+        "type": "any",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "hasText",
+        "documentation": "",
+        "type": "boolean",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "text",
+        "documentation": "",
+        "type": "string",
+        "className": "ItemValue",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "setData",
+        "documentation": "",
+        "type": "(value: any) => void",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "ItemValue",
+        "pmeType": "method"
+    },
+    {
+        "name": "url",
+        "documentation": "",
+        "type": "string",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "path",
+        "documentation": "",
+        "type": "string",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "valueName",
+        "documentation": "",
+        "type": "string",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "titleName",
+        "documentation": "",
+        "type": "string",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getResultCallback",
+        "documentation": "",
+        "type": "(items: ItemValue[]) => void",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "error",
+        "documentation": "",
+        "type": "SurveyError",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "run",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "ChoicesRestfull",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "ChoicesRestfull",
+        "pmeType": "method"
+    },
+    {
+        "name": "isEmpty",
+        "documentation": "",
+        "type": "boolean",
+        "className": "ChoicesRestfull",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "setData",
+        "documentation": "",
+        "type": "(json: any) => void",
+        "parameters": [
+            {
+                "name": "json",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "ChoicesRestfull",
+        "pmeType": "method"
+    },
+    {
+        "name": "clear",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "ChoicesRestfull",
+        "pmeType": "method"
+    },
+    {
+        "name": "customWidget",
+        "documentation": "The link to the custom widget.",
+        "type": "QuestionCustomWidget",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "visibleIf",
+        "documentation": "An expression that returns true or false. If it returns a true the Question becomes visible and if it returns false the Panel becomes invisible. The library perform the expression on survey start and on changing a question value. If the property is empty then visible property is used.",
+        "type": "string",
+        "see": [
+            "visible"
+        ],
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "width",
+        "documentation": "Use it to set the specific width to the question.",
+        "type": "string",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "localeChanged",
+        "documentation": "The event is fired when the survey change it's locale",
+        "type": "Event<(sender: QuestionBase) => any, any>",
+        "see": [
+            "SurveyModel.locale"
+        ],
+        "className": "QuestionBase",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "isPanel",
+        "documentation": "Always returns false.",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visible",
+        "documentation": "Use it to get/set the question visibility.",
+        "type": "boolean",
+        "see": [
+            "visibleIf"
+        ],
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "isVisible",
+        "documentation": "Returns true if the question is visible or survey is in design mode right now.",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isReadOnly",
+        "documentation": "Returns true if there is no input in the question. It always returns true for html question or survey is in 'display' mode.",
+        "type": "boolean",
+        "see": [
+            "QuestionHtmlModel",
+            "SurveyModel.mode",
+            "Question.readOnly"
+        ],
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visibleIndex",
+        "documentation": "Returns the visible index of the question in the survey. It can be from 0 to all visible questions count - 1",
+        "type": "number",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasErrors",
+        "documentation": "Returns true if there is at least one error on question validation.",
+        "type": "(fireCallback?: boolean) => boolean",
+        "parameters": [
+            {
+                "name": "fireCallback",
+                "documentation": "set it to true to show error in UI",
+                "type": "boolean"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "currentErrorCount",
+        "documentation": "Returns the number of erros on validation.",
+        "type": "number",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasTitle",
+        "documentation": "Returns false if the question doesn't have a title property, for example: QuestionHtmlModel",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasInput",
+        "documentation": "Returns false if the question doesn't have an input element, for example: QuestionHtmlModel",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasComment",
+        "documentation": "Returns true, if you can have a comment for the question.",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "id",
+        "documentation": "Returns the unique identificator. It is generated automatically.",
+        "type": "string",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "startWithNewLine",
+        "documentation": "The Question renders on the new line if the property is true. If the property is false, the question tries to render on the same line/row with a previous question/panel.",
+        "type": "boolean",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "renderWidth",
+        "documentation": "The rendered width of the question.",
+        "type": "string",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "indent",
+        "documentation": "Set it different from 0 to increase the left padding.",
+        "type": "number",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "rightIndent",
+        "documentation": "Set it different from 0 to increase the right padding.",
+        "type": "number",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "focus",
+        "documentation": "Focus the question input.",
+        "type": "(onError?: boolean) => void",
+        "parameters": [
+            {
+                "name": "onError",
+                "documentation": "Focus if there is an error.",
+                "type": "boolean"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "survey",
+        "documentation": "Returns the survey object.",
+        "type": "ISurvey",
+        "className": "QuestionBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "runCondition",
+        "documentation": "Run visibleIf expression. If visibleIf is not empty, then the results of performing the expression (true or false) set to the visible property.",
+        "type": "(values: HashTable<any>) => void",
+        "see": [
+            "visible",
+            "visibleIf"
+        ],
+        "parameters": [
+            {
+                "name": "values",
+                "documentation": "Typically survey results",
+                "type": "HashTable<any>"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "onSurveyValueChanged",
+        "documentation": "",
+        "type": "(newValue: any) => void",
+        "parameters": [
+            {
+                "name": "newValue",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "onSurveyLoad",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "setVisibleIndex",
+        "documentation": "",
+        "type": "(value: number) => void",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "number"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportGoNextPageAutomatic",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "clearUnusedValues",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "getLocale",
+        "documentation": "Returns the current survey locale",
+        "type": "() => string",
+        "see": [
+            "SurveyModel.locale"
+        ],
+        "parameters": [],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "getMarkdownHtml",
+        "documentation": "",
+        "type": "(text: string) => string",
+        "parameters": [
+            {
+                "name": "text",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "QuestionBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasTitle",
+        "documentation": "",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "hasInput",
+        "documentation": "",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "inputId",
+        "documentation": "",
+        "type": "string",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "title",
+        "documentation": "Question title. Use survey questionTitleTemplate property to change the title question is rendered. If it is empty, then question name property is used.",
+        "type": "string",
+        "see": [
+            "SurveyModel.questionTitleTemplate"
+        ],
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "processedTitle",
+        "documentation": "Returns the rendred question title.",
+        "type": "string",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "fullTitle",
+        "documentation": "Returns the title after processing the question template.",
+        "type": "string",
+        "see": [
+            "SurveyModel.questionTitleTemplate"
+        ],
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "focus",
+        "documentation": "",
+        "type": "(onError?: boolean) => void",
+        "parameters": [
+            {
+                "name": "onError",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportComment",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportOther",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "isRequired",
+        "documentation": "Set this property to true, to make the question a required. If a user doesn't answer the question then a validation error will be generated.",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "hasComment",
+        "documentation": "",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "commentText",
+        "documentation": "Use it to get or set the comment value.",
+        "type": "string",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "hasOther",
+        "documentation": "",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "isReadOnly",
+        "documentation": "Retuns true if readOnly property is true or survey is in display mode.",
+        "type": "boolean",
+        "see": [
+            "SurveyModel.model",
+            "readOnly"
+        ],
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "readOnly",
+        "documentation": "Set it to true to make a question readonly.\nSet it to true to make the question readonly.",
+        "type": "boolean",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "value",
+        "documentation": "Get/Set the question value.",
+        "type": "any",
+        "see": [
+            "SurveyMode.setValue",
+            "SurveyMode.getValue"
+        ],
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "comment",
+        "documentation": "The question comment value.",
+        "type": "string",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "isEmpty",
+        "documentation": "Returns true if the question value is empty",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasErrors",
+        "documentation": "Returns true if threre is a validation error(s) in the question. ",
+        "type": "(fireCallback?: boolean) => boolean",
+        "parameters": [
+            {
+                "name": "fireCallback",
+                "documentation": "set it to true to show an error in UI.",
+                "type": "boolean"
+            }
+        ],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "currentErrorCount",
+        "documentation": "Returns the validation errors count.",
+        "type": "number",
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "requiredText",
+        "documentation": "Returns the char/string for a required question.",
+        "type": "string",
+        "see": [
+            "SurveyModel.requiredText"
+        ],
+        "className": "Question",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "addError",
+        "documentation": "Add error into the question error list.",
+        "type": "(error: SurveyError) => void",
+        "parameters": [
+            {
+                "name": "error",
+                "documentation": "",
+                "type": "SurveyError"
+            }
+        ],
+        "className": "Question",
+        "pmeType": "method"
+    },
+    {
+        "name": "choicesByUrl",
+        "documentation": "Use this property to fill the choices from a restful service.",
+        "type": "ChoicesRestfull",
+        "see": [
+            "choices"
+        ],
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "storeOthersAsComment",
+        "documentation": "By default the entered text in the others input in the checkbox/radiogroup/dropdown are stored as \"question name \" + \"-Comment\". The value itself is \"question name\": \"others\". Set this property to false, to store the entered text directly in the \"question name\" key.",
+        "type": "boolean",
+        "see": [
+            "SurveyModel.storeOthersAsComment"
+        ],
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "otherItem",
+        "documentation": "Returns the other item. By using this property, you may change programmatically it's value and text.",
+        "type": "ItemValue",
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isOtherSelected",
+        "documentation": "Returns true if a user select the 'other' item.",
+        "type": "boolean",
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "choices",
+        "documentation": "The list of items. Every item has value and text. If text is empty, the value is rendered. The item text supports markdown.",
+        "type": "any[]",
+        "see": [
+            "choicesByUrl"
+        ],
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "choicesOrder",
+        "documentation": "Use this property to render items in a specific order.",
+        "type": "string",
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "otherText",
+        "documentation": "Use this property to set the different text for other item.",
+        "type": "string",
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "otherErrorText",
+        "documentation": "The text that shows when the other item is choosed by the other input is empty.",
+        "type": "string",
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "visibleChoices",
+        "documentation": "The list of items as they will be rendered. If needed items are sorted and the other item is added.",
+        "type": "ItemValue[]",
+        "see": [
+            "hasOther",
+            "choicesOrder"
+        ],
+        "className": "QuestionSelectBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "supportComment",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionSelectBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportOther",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionSelectBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionSelectBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "colCount",
+        "documentation": "The number of columns for radiogroup and checkbox questions. Items are rendred in one line if the value is 0.",
+        "type": "number",
+        "className": "QuestionCheckboxBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "optionsCaption",
+        "documentation": "Use this property to set the options caption different from the default value. The default value is taken from localization strings.",
+        "type": "string",
+        "className": "QuestionDropdownModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionDropdownModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionDropdownModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionCheckboxModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionRadiogroupModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "size",
+        "documentation": "The text input size",
+        "type": "number",
+        "className": "QuestionTextModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 25
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "inputType",
+        "documentation": "Use this property to change the default input type.",
+        "type": "string",
+        "className": "QuestionTextModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "text",
+        "serializedChoices": [
+            "color",
+            "date",
+            "datetime",
+            "datetime-local",
+            "email",
+            "month",
+            "number",
+            "password",
+            "range",
+            "tel",
+            "text",
+            "time",
+            "url",
+            "week"
+        ]
+    },
+    {
+        "name": "placeHolder",
+        "documentation": "The input place holder.",
+        "type": "string",
+        "className": "QuestionTextModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "rows",
+        "documentation": "The html rows attribute.",
+        "type": "number",
+        "className": "QuestionCommentModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 4
+    },
+    {
+        "name": "cols",
+        "documentation": "The html cols attribute.",
+        "type": "number",
+        "className": "QuestionCommentModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 50
+    },
+    {
+        "name": "placeHolder",
+        "documentation": "Use this property to set the input place holder.",
+        "type": "string",
+        "className": "QuestionCommentModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionCommentModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "addDefaultColumns",
+        "documentation": "",
+        "type": "(matrix: QuestionMatrixDropdownModelBase) => void",
+        "parameters": [
+            {
+                "name": "matrix",
+                "documentation": "",
+                "type": "QuestionMatrixDropdownModelBase"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "columnMinWidth",
+        "documentation": "Use this property to set the mimimum column width.",
+        "type": "string",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "horizontalScroll",
+        "documentation": "Set this property to true to show the horizontal scroll.",
+        "type": "boolean",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "columns",
+        "documentation": "The list of matrix columns.",
+        "type": "MatrixDropdownColumn[]",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "cellType",
+        "documentation": "Use this property to change the default cell type.",
+        "type": "string",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "dropdown",
+        "serializedChoices": [
+            "dropdown",
+            "checkbox",
+            "radiogroup",
+            "text",
+            "comment"
+        ]
+    },
+    {
+        "name": "columnColCount",
+        "documentation": "The default column count for radiogroup and checkbox  cell types.",
+        "type": "number",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "serializedChoices": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "name": "getRequiredText",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "getColumnWidth",
+        "documentation": "Returns the column width.",
+        "type": "(column: MatrixDropdownColumn) => string",
+        "parameters": [
+            {
+                "name": "column",
+                "documentation": "",
+                "type": "MatrixDropdownColumn"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "choices",
+        "documentation": "The default choices for dropdown, checkbox and radiogroup cell types.",
+        "type": "any[]",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "optionsCaption",
+        "documentation": "The default options caption for dropdown cell type.",
+        "type": "string",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "locOptionsCaption",
+        "documentation": "",
+        "type": "LocalizableString",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "addColumn",
+        "documentation": "",
+        "type": "(name: string, title?: string) => MatrixDropdownColumn",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "title",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "visibleRows",
+        "documentation": "Returns the rows model objects that used during rendering.",
+        "type": "MatrixDropdownRowModelBase[]",
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "onSurveyLoad",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "getRowValue",
+        "documentation": "Returns the row value. If the row value is empty, the object is empty: {}. ",
+        "type": "(rowIndex: number) => any",
+        "parameters": [
+            {
+                "name": "rowIndex",
+                "documentation": "row index from 0 to visible row count - 1.",
+                "type": "number"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "setRowValue",
+        "documentation": "Set the row value.",
+        "type": "(rowIndex: number, rowValue: any) => any",
+        "parameters": [
+            {
+                "name": "rowIndex",
+                "documentation": "row index from 0 to visible row count - 1.",
+                "type": "number"
+            },
+            {
+                "name": "rowValue",
+                "documentation": "an object {\"column name\": columnValue,... }",
+                "type": "any"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasErrors",
+        "documentation": "",
+        "type": "(fireCallback?: boolean) => boolean",
+        "parameters": [
+            {
+                "name": "fireCallback",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "createQuestion",
+        "documentation": "",
+        "type": "(row: MatrixDropdownRowModelBase, column: MatrixDropdownColumn) => Question",
+        "parameters": [
+            {
+                "name": "row",
+                "documentation": "",
+                "type": "MatrixDropdownRowModelBase"
+            },
+            {
+                "name": "column",
+                "documentation": "",
+                "type": "MatrixDropdownColumn"
+            }
+        ],
+        "className": "QuestionMatrixDropdownModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "rows",
+        "documentation": "The list of rows. A row has a value and an optional text",
+        "type": "any[]",
+        "className": "QuestionMatrixDropdownModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMatrixDropdownModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "rowCount",
+        "documentation": "The number of rows in the matrix.",
+        "type": "number",
+        "see": [
+            "minRowCount",
+            "maxRowCount"
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 2
+    },
+    {
+        "name": "minRowCount",
+        "documentation": "The minimum row count. A user could not delete a row if the rowCount equals to minRowCount",
+        "type": "number",
+        "see": [
+            "rowCount",
+            "maxRowCount"
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "maxRowCount",
+        "documentation": "The minimum row count. A user could not add a row if the rowCount equals to maxRowCount",
+        "type": "number",
+        "see": [
+            "rowCount",
+            "minRowCount"
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 100
+    },
+    {
+        "name": "canAddRow",
+        "documentation": "Returns true, if a new row can be added.",
+        "type": "boolean",
+        "see": [
+            "maxRowCount",
+            "canRemoveRow",
+            "rowCount"
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "canRemoveRow",
+        "documentation": "Returns true, if a row can be removed.",
+        "type": "boolean",
+        "see": [
+            "minRowCount",
+            "canAddRow",
+            "rowCount"
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "addRow",
+        "documentation": "Creates and add a new row.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "removeRow",
+        "documentation": "Removes a row by it's index.",
+        "type": "(index: number) => void",
+        "parameters": [
+            {
+                "name": "index",
+                "documentation": "a row index, from 0 to rowCount - 1",
+                "type": "number"
+            }
+        ],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "addRowText",
+        "documentation": "Use this property to change the default value of add row button text.",
+        "type": "string",
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "removeRowText",
+        "documentation": "Use this property to change the default value of remove row button text.",
+        "type": "string",
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "supportGoNextPageAutomatic",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionMatrixDynamicModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isAllRowRequired",
+        "documentation": "Set this property to true, if you want a user to answer all rows.",
+        "type": "boolean",
+        "className": "QuestionMatrixModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMatrixModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasRows",
+        "documentation": "Returns true, if there is at least one row.",
+        "type": "boolean",
+        "className": "QuestionMatrixModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visibleRows",
+        "documentation": "Returns the list of rows as model objects.",
+        "type": "MatrixRowModel[]",
+        "className": "QuestionMatrixModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMatrixModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "itemSize",
+        "documentation": "The default text input size.",
+        "type": "number",
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 25
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "items",
+        "documentation": "The list of input items.",
+        "type": "MultipleTextItemModel[]",
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "addItem",
+        "documentation": "Add a new text item.",
+        "type": "(name: string, title?: string) => MultipleTextItemModel",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "a item name",
+                "type": "string"
+            },
+            {
+                "name": "title",
+                "documentation": "a item title (optional)",
+                "type": "string"
+            }
+        ],
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "onLocaleChanged",
+        "documentation": "",
+        "type": "() => void",
+        "parameters": [],
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "colCount",
+        "documentation": "The number of columns. Items are rendred in one line if the value is 0.",
+        "type": "number",
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": 1,
+        "serializedChoices": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    {
+        "name": "getRows",
+        "documentation": "Returns the list of rendered rows.",
+        "type": "() => any[]",
+        "parameters": [],
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasErrors",
+        "documentation": "",
+        "type": "(fireCallback?: boolean) => boolean",
+        "parameters": [
+            {
+                "name": "fireCallback",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "QuestionMultipleTextModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "parent",
+        "documentation": "A parent element. It is always null for the Page object and always not null for the Panel object. Panel object may contain Questions and other Panels.",
+        "type": "PanelModelBase",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "visibleIf",
+        "documentation": "An expression that returns true or false. If it returns a true the Panel becomes visible and if it returns false the Panel becomes invisible. The library perform the expression on survey start and on changing a question value. If the property is empty then visible property is used.",
+        "type": "string",
+        "see": [
+            "visible"
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "title",
+        "documentation": "PanelModel or PageModel title property.",
+        "type": "string",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "id",
+        "documentation": "A unique element identificator. It is generated automatically.",
+        "type": "string",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isPanel",
+        "documentation": "Returns true if the current object is Panel. Returns false if the current object is Page (a root Panel).",
+        "type": "boolean",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "questions",
+        "documentation": "Returns the list of all questions located in the Panel/Page, including in the nested Panels.",
+        "type": "QuestionBase[]",
+        "see": [
+            "QuestionBase",
+            "elements"
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "elements",
+        "documentation": "Returns the list of the elements in the object, Panel/Page. Elements can be questions or panels. The function doesn't return elements in the nested Panels.",
+        "type": "IElement[]",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "containsElement",
+        "documentation": "Returns true if the current element belongs to the Panel/Page. It looks in nestede Panels as well.",
+        "type": "(element: IElement) => boolean",
+        "see": [
+            "PanelModel"
+        ],
+        "parameters": [
+            {
+                "name": "element",
+                "documentation": "",
+                "type": "IElement"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasErrors",
+        "documentation": "Returns true, if there is an error on this Page or inside the current Panel",
+        "type": "(fireCallback?: boolean, focuseOnFirstError?: boolean) => boolean",
+        "parameters": [
+            {
+                "name": "fireCallback",
+                "documentation": "set it to true, to show errors in UI",
+                "type": "boolean"
+            },
+            {
+                "name": "focuseOnFirstError",
+                "documentation": "set it to true to focuse on the first question that doesn't pass the validation",
+                "type": "boolean"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "addQuestionsToList",
+        "documentation": "Fill list array with the questions.",
+        "type": "(list: IQuestion[], visibleOnly?: boolean) => void",
+        "parameters": [
+            {
+                "name": "list",
+                "documentation": "",
+                "type": "IQuestion[]"
+            },
+            {
+                "name": "visibleOnly",
+                "documentation": "set it to true to get visible questions only",
+                "type": "boolean"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "isActive",
+        "documentation": "Returns true if the current object is Page and it is the current page.",
+        "type": "boolean",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "processedTitle",
+        "documentation": "Returns rendered title text or html.",
+        "type": "string",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visible",
+        "documentation": "Use it to get/set the object visibility.",
+        "type": "boolean",
+        "see": [
+            "visibleIf"
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "isVisible",
+        "documentation": "Returns true if object is visible or survey is in design mode right now.",
+        "type": "boolean",
+        "className": "PanelModelBase",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "addElement",
+        "documentation": "Add an elememnt into Panel or Page.",
+        "type": "(element: IElement, index?: number) => void",
+        "parameters": [
+            {
+                "name": "element",
+                "documentation": "",
+                "type": "IElement"
+            },
+            {
+                "name": "index",
+                "documentation": "element index in the elements array",
+                "type": "number"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "addQuestion",
+        "documentation": "Add a question into Panel or Page.",
+        "type": "(question: QuestionBase, index?: number) => void",
+        "parameters": [
+            {
+                "name": "question",
+                "documentation": "",
+                "type": "QuestionBase"
+            },
+            {
+                "name": "index",
+                "documentation": "element index in the elements array",
+                "type": "number"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "addPanel",
+        "documentation": "Add a panel into Panel or Page.",
+        "type": "(panel: PanelModel, index?: number) => void",
+        "parameters": [
+            {
+                "name": "panel",
+                "documentation": "",
+                "type": "PanelModel"
+            },
+            {
+                "name": "index",
+                "documentation": "element index in the elements array",
+                "type": "number"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "addNewQuestion",
+        "documentation": "Creates a new question and adds it into the end of the elements list.",
+        "type": "(questionType: string, name: string) => QuestionBase",
+        "parameters": [
+            {
+                "name": "questionType",
+                "documentation": "the possible values are: \"text\", \"checkbox\", \"dropdown\", \"matrix\", \"html\", \"matrixdynamic\", \"matrixdropdown\" and so on.",
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "documentation": "a question name",
+                "type": "string"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "addNewPanel",
+        "documentation": "Creates a new panel and adds it inot the end of the elements list.",
+        "type": "(name: string) => PanelModel",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "a panel name",
+                "type": "string"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "removeElement",
+        "documentation": "Remove an element (Panel or Question) from the elements list.",
+        "type": "(element: IElement) => boolean",
+        "see": [
+            "elements"
+        ],
+        "parameters": [
+            {
+                "name": "element",
+                "documentation": "",
+                "type": "IElement"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "removeQuestion",
+        "documentation": "Remove question  from the elements list.",
+        "type": "(question: QuestionBase) => void",
+        "see": [
+            "elements",
+            "removeElement"
+        ],
+        "parameters": [
+            {
+                "name": "question",
+                "documentation": "",
+                "type": "QuestionBase"
+            }
+        ],
+        "className": "PanelModelBase",
+        "pmeType": "method"
+    },
+    {
+        "name": "width",
+        "documentation": "The Panel width.",
+        "type": "string",
+        "className": "PanelModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "PanelModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "setData",
+        "documentation": "",
+        "type": "(newValue: ISurveyData) => void",
+        "parameters": [
+            {
+                "name": "newValue",
+                "documentation": "",
+                "type": "ISurveyData"
+            }
+        ],
+        "className": "PanelModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isPanel",
+        "documentation": "",
+        "type": "boolean",
+        "className": "PanelModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "innerIndent",
+        "documentation": "The inner indent. Set this property to increase the panel content margin. ",
+        "type": "number",
+        "className": "PanelModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "serializedChoices": [
+            0,
+            1,
+            2,
+            3
+        ]
+    },
+    {
+        "name": "startWithNewLine",
+        "documentation": "The Panel renders on the new line if the property is true. If the property is false, the panel tries to render on the same line/row with a previous question/panel.",
+        "type": "boolean",
+        "className": "PanelModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "rightIndent",
+        "documentation": "The right indent of the Panel.",
+        "type": "number",
+        "className": "PanelModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "visibleIndex",
+        "documentation": "The visible index of the page. It has values from 0 to visible page count - 1.",
+        "type": "number",
+        "see": [
+            "SurveyModel.visiblePages",
+            "SurveyModel.pages"
+        ],
+        "className": "PageModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "PageModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "num",
+        "documentation": "",
+        "type": "number",
+        "className": "PageModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "navigationButtonsVisibility",
+        "documentation": "Set this property to \"hide\" to make \"Prev\", \"Next\" and \"Complete\" buttons are invisible for this page. Set this property to \"show\" to make these buttons visible, even if survey showNavigationButtons property is false.",
+        "type": "string",
+        "see": [
+            "SurveyMode.showNavigationButtons"
+        ],
+        "className": "PageModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "inherit",
+        "serializedChoices": [
+            "inherit",
+            "show",
+            "hide"
+        ]
+    },
+    {
+        "name": "focusFirstQuestion",
+        "documentation": "Call it to focus the input on the first question",
+        "type": "() => void",
+        "parameters": [],
+        "className": "PageModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "focusFirstErrorQuestion",
+        "documentation": "Call it to focus the input of the first question that has an error.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "PageModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "scrollToTop",
+        "documentation": "Call it to scroll to the page top.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "PageModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "imageHeight",
+        "documentation": "The image height.",
+        "type": "string",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "imageWidth",
+        "documentation": "The image width.",
+        "type": "string",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "storeDataAsText",
+        "documentation": "Set it to true to serialize file content as text.",
+        "type": "boolean",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "maxSize",
+        "documentation": "Use this property to setup the maximum allowed file size.",
+        "type": "number",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionFileModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "showPreview",
+        "documentation": "Set it to true, to show the preview for the image files.",
+        "type": "boolean",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "loadFile",
+        "documentation": "Load file programmatically.",
+        "type": "(file: File) => void",
+        "parameters": [
+            {
+                "name": "file",
+                "documentation": "",
+                "type": "File"
+            }
+        ],
+        "className": "QuestionFileModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "previewValue",
+        "documentation": "",
+        "type": "any",
+        "className": "QuestionFileModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionHtmlModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "html",
+        "documentation": "",
+        "type": "string",
+        "className": "QuestionHtmlModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "processedHtml",
+        "documentation": "",
+        "type": "string",
+        "className": "QuestionHtmlModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "rateValues",
+        "documentation": "The list of rate items. Every item has value and text. If text is empty, the value is rendered. The item text supports markdown. If it is empty the default array [1, 2, 3, 4, 5] is used.",
+        "type": "any[]",
+        "className": "QuestionRatingModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "QuestionRatingModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportComment",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionRatingModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "supportOther",
+        "documentation": "",
+        "type": "() => boolean",
+        "parameters": [],
+        "className": "QuestionRatingModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "minRateDescription",
+        "documentation": "The description of minimum (first) item.",
+        "type": "string",
+        "className": "QuestionRatingModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "maxRateDescription",
+        "documentation": "The description of maximum (last) item.",
+        "type": "string",
+        "className": "QuestionRatingModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "value",
+        "documentation": "",
+        "type": "any",
+        "className": "Trigger",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "operator",
+        "documentation": "",
+        "type": "string",
+        "className": "Trigger",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "check",
+        "documentation": "",
+        "type": "(value: any) => void",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "Trigger",
+        "pmeType": "method"
+    },
+    {
+        "name": "name",
+        "documentation": "",
+        "type": "string",
+        "className": "SurveyTrigger",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "setOwner",
+        "documentation": "",
+        "type": "(owner: ISurveyTriggerOwner) => void",
+        "parameters": [
+            {
+                "name": "owner",
+                "documentation": "",
+                "type": "ISurveyTriggerOwner"
+            }
+        ],
+        "className": "SurveyTrigger",
+        "pmeType": "method"
+    },
+    {
+        "name": "isOnNextPage",
+        "documentation": "",
+        "type": "boolean",
+        "className": "SurveyTrigger",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "pages",
+        "documentation": "",
+        "type": "string[]",
+        "className": "SurveyTriggerVisible",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "questions",
+        "documentation": "",
+        "type": "string[]",
+        "className": "SurveyTriggerVisible",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "SurveyTriggerVisible",
+        "pmeType": "method"
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "SurveyTriggerComplete",
+        "pmeType": "method"
+    },
+    {
+        "name": "isOnNextPage",
+        "documentation": "",
+        "type": "boolean",
+        "className": "SurveyTriggerComplete",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "serviceUrl",
+        "documentation": "",
+        "type": "string",
+        "className": "dxSurveyService",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "loadSurvey",
+        "documentation": "",
+        "type": "(surveyId: string, onLoad: (success: boolean, result: string, response: any) => void) => void",
+        "parameters": [
+            {
+                "name": "surveyId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "onLoad",
+                "documentation": "",
+                "type": "(success: boolean, result: string, response: any) => void"
+            }
+        ],
+        "className": "dxSurveyService",
+        "pmeType": "method"
+    },
+    {
+        "name": "sendResult",
+        "documentation": "",
+        "type": "(postId: string, result: JSON, onSendResult: (success: boolean, response: any) => void, clientId?...",
+        "parameters": [
+            {
+                "name": "postId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "result",
+                "documentation": "",
+                "type": "JSON"
+            },
+            {
+                "name": "onSendResult",
+                "documentation": "",
+                "type": "(success: boolean, response: any) => void"
+            },
+            {
+                "name": "clientId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "isPartialCompleted",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "dxSurveyService",
+        "pmeType": "method"
+    },
+    {
+        "name": "sendFile",
+        "documentation": "",
+        "type": "(postId: string, file: File, onSendFile: (success: boolean, response: any) => void) => void",
+        "parameters": [
+            {
+                "name": "postId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "file",
+                "documentation": "",
+                "type": "File"
+            },
+            {
+                "name": "onSendFile",
+                "documentation": "",
+                "type": "(success: boolean, response: any) => void"
+            }
+        ],
+        "className": "dxSurveyService",
+        "pmeType": "method"
+    },
+    {
+        "name": "getResult",
+        "documentation": "",
+        "type": "(resultId: string, name: string, onGetResult: (success: boolean, data: any, dataList: any[], resp...",
+        "parameters": [
+            {
+                "name": "resultId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "onGetResult",
+                "documentation": "",
+                "type": "(success: boolean, data: any, dataList: any[], response: any) => void"
+            }
+        ],
+        "className": "dxSurveyService",
+        "pmeType": "method"
+    },
+    {
+        "name": "isCompleted",
+        "documentation": "",
+        "type": "(resultId: string, clientId: string, onIsCompleted: (success: boolean, result: string, response: ...",
+        "parameters": [
+            {
+                "name": "resultId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "clientId",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "onIsCompleted",
+                "documentation": "",
+                "type": "(success: boolean, result: string, response: any) => void"
+            }
+        ],
+        "className": "dxSurveyService",
+        "pmeType": "method"
+    },
+    {
+        "name": "surveyId",
+        "documentation": "Set this property to automatically load survey Json from [dxsurvey.com](http://www.dxsurvey.com) service.",
+        "type": "string",
+        "see": [
+            "loadSurveyFromService"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "surveyPostId",
+        "documentation": "Set this property to automatically save the data into the [dxsurvey.com](http://www.dxsurvey.com) service.",
+        "type": "string",
+        "see": [
+            "onComplete"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "clientId",
+        "documentation": "Use this property as indentificator for a user, for example e-mail or unique customer id in your web application. If you are loading survey or posting survey results  from/to [dxsurvey.com](http://www.dxsurvey.com) service, then the library do not allow to run the same survey the second time. On the second run, the user will see the 'Thank you' page.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "cookieName",
+        "documentation": "If the property is not empty, before starting to run the survey, the library checkes if the cookie with this name exists. If it is true, the survey goes to complete mode and an user sees the 'Thank you' page. On completing the survey the cookie with this name is created.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "sendResultOnPageNext",
+        "documentation": "Set it to true, to save results on completing every page. onPartialSend event is fired.",
+        "type": "boolean",
+        "see": [
+            "onPartialSend",
+            "clientId"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "commentPrefix",
+        "documentation": "You may show comments input for the most of questions. The entered text in the comment input will be saved as 'question name' + 'commentPrefix'.",
+        "type": "string",
+        "see": [
+            "data"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "focusFirstQuestionAutomatic",
+        "documentation": "On showing the next or previous page, a first input is focused, if the property set to true.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "showNavigationButtons",
+        "documentation": "Set it to false to hide 'Prev', 'Next' and 'Complete' buttons. It makes sense if you are going to create a custom navigation or have just one page or on setting goNextPageAutomatic property.",
+        "type": "boolean",
+        "see": [
+            "goNextPageAutomatic"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "showTitle",
+        "documentation": "Set it to false hide survey title.",
+        "type": "boolean",
+        "see": [
+            "title"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "showPageTitles",
+        "documentation": "Set it to false to hide page titles.",
+        "type": "boolean",
+        "see": [
+            "PageModel.title"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "showCompletedPage",
+        "documentation": "On finishing the survey the 'Thank you', page on complete, is shown. Set the property to false, to hide the 'Thank you' page.",
+        "type": "boolean",
+        "see": [
+            "data",
+            "onComplete"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "requiredText",
+        "documentation": "A char/string that will be rendered in the title required questions.",
+        "type": "string",
+        "see": [
+            "QuestionBase.title"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "*"
+    },
+    {
+        "name": "questionStartIndex",
+        "documentation": "By default the first question index is 1. You may start it from 100 or from 'A', by setting 100 or 'A' to this property.",
+        "type": "string",
+        "see": [
+            "QuestionBase.title",
+            "requiredText"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "storeOthersAsComment",
+        "documentation": "By default the entered text in the others input in the checkbox/radiogroup/dropdown are stored as \"question name \" + \"-Comment\". The value itself is \"question name\": \"others\". Set this property to false, to store the entered text directly in the \"question name\" key.",
+        "type": "boolean",
+        "see": [
+            "commentPrefix"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": true
+    },
+    {
+        "name": "goNextPageAutomatic",
+        "documentation": "Set it true if you want to go to the next page without pressing 'Next' button when all questions are anwered.",
+        "type": "boolean",
+        "see": [
+            "showNavigationButtons "
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "pages",
+        "documentation": "The list of all pages in the survey, including invisible.",
+        "type": "PageModel[]",
+        "see": [
+            "PageModel",
+            "visiblePages"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "triggers",
+        "documentation": "The list of triggers in the survey.",
+        "type": "SurveyTrigger[]",
+        "see": [
+            "SurveyTrigger"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "clearInvisibleValues",
+        "documentation": "Set it to true, to remove from data property values of invisible questions on survey complete. In this case, the invisible questions will not be stored on the server.",
+        "type": "boolean",
+        "see": [
+            "QuestionBase.visible",
+            "oncComplete"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "onComplete",
+        "documentation": "The event is fired after a user click on 'Complete' button and finished the survey. You may use it to send the data to your web server.",
+        "type": "Event<(sender: SurveyModel) => any, any>",
+        "see": [
+            "data",
+            "clearInvisibleValues",
+            "completeLastPage",
+            "surveyPostId"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onPartialSend",
+        "documentation": "The event is fired on clicking 'Next' page if sendResultOnPageNext is set to true. You may use it to save the intermidiate results, for example, if your survey is large enough.",
+        "type": "Event<(sender: SurveyModel) => any, any>",
+        "see": [
+            "sendResultOnPageNext"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onCurrentPageChanged",
+        "documentation": "The event is fired when another page becomes the current. Typically it happens when a user click on 'Next' or 'Prev' buttons.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "currentPage",
+            "currentPageNo",
+            "nextPage",
+            "prevPage",
+            "completeLastPage"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onValueChanged",
+        "documentation": "The event is fired when the question value is changed. It can be done via UI by a user or programmatically on calling setValue method.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "setValue"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onVisibleChanged",
+        "documentation": "The event is fired on changing a question visability.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "QuestionBase.visibile",
+            "QuestionBase.visibileIf"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onPageVisibleChanged",
+        "documentation": "The event is fired on changing a page visability.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "PageModel.visibile",
+            "PageModel.visibileIf"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onQuestionAdded",
+        "documentation": "The event is fired on adding a new question into survey.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "QuestionBase"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onQuestionRemoved",
+        "documentation": "The event is fired on removing a question from survey",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "QuestionBase"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onPanelAdded",
+        "documentation": "The event is fired on adding a panel into survey",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "PanelModel"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onPanelRemoved",
+        "documentation": "The event is fired on removing a panel from survey",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "PanelModel"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onValidateQuestion",
+        "documentation": "The event is fired on validating value in a question. There are following properties in options: options.name is a question name, options.value is the current question value and options.error is an empty string. Set your error to options.error and survey will show the error for the question and block completing the survey or going to the next page.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onServerValidateQuestions",
+        "documentation": "Use this event to validate data on your server.",
+        "type": "(sender: SurveyModel, options: any) => any",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "onProcessHtml",
+        "documentation": "Use this event to modify the html before rendering, for example html on 'Thank you' page. Options has one parameter: Options.html.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "completedHtml",
+            "QuestionHtmlModel.html"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onTextMarkdown",
+        "documentation": "Use this event to process the markdown text. ",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onSendResult",
+        "documentation": "The event fires when it get response from the [dxsurvey.com](http://www.dxsurvey.com) service on saving survey results. Use it to find out if the results have been saved successful.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onGetResult",
+        "documentation": "Use it to get results after calling the getResult method. It returns a simple analytic from [dxsurvey.com](http://www.dxsurvey.com) service.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "getResult"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onUploadFile",
+        "documentation": "The event is fired on uploading the file in QuestionFile. You may use it to change the file name or tells the library do not accept the file. There are three properties in options: options.name, options.file and options.accept.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "uploadFile"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onAfterRenderSurvey",
+        "documentation": "The event is fired right after survey is rendered in DOM. options.htmlElement is the root element.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onAfterRenderPage",
+        "documentation": "The event is fired right after a page is rendred in DOM. Use it to modify html elements. There are two parameters in options: options.currentPage, options.htmlElement",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onAfterRenderQuestion",
+        "documentation": "The event is fired right after a question is rendred in DOM. Use it to modify html elements. There are two parameters in options: options.question, options.htmlElement",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onAfterRenderPanel",
+        "documentation": "The event is fired right after a panel is rendred in DOM. Use it to modify html elements. There are two parameters in options: options.panel, options.htmlElement",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "onMatrixRowAdded",
+        "documentation": "The event is fired on adding a new row in Matrix Dynamic quesiton. Options.question is a matrix question.",
+        "type": "Event<(sender: SurveyModel, options: any) => any, any>",
+        "see": [
+            "QuestionMatrixDynamicModel",
+            "QuestionMatrixDynamicModel.visibleRows"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "event",
+        "parameters": []
+    },
+    {
+        "name": "jsonErrors",
+        "documentation": "The list of errors on loading survey json. If the list is empty after loading a json then the json is correct and there is no errors in it.",
+        "type": "JsonError[]",
+        "see": [
+            "JsonError"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "locale",
+        "documentation": "Use it to change the survey locale. By default it is empty, 'en'. You may set it to 'de' - german, 'fr' - french and so on. The library has built-in localization for several languages. The library has a multi-language support as well.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "serializedChoices": [
+            "",
+            "en"
+        ]
+    },
+    {
+        "name": "getMarkdownHtml",
+        "documentation": "",
+        "type": "(text: string) => any",
+        "parameters": [
+            {
+                "name": "text",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "emptySurveyText",
+        "documentation": "Returns the text that renders when there is no any visible page and question.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "title",
+        "documentation": "Survey title.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "completedHtml",
+        "documentation": "The html that shows on completed ('Thank you') page. Set it to change the default text.",
+        "type": "string",
+        "see": [
+            "showCompletedPage",
+            "locale"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "pagePrevText",
+        "documentation": "A text that renders on the 'Prev' button. Set it to change the default text.",
+        "type": "string",
+        "see": [
+            "locale"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "pageNextText",
+        "documentation": "A text that renders on the 'Next' button. Set it to change the default text.",
+        "type": "string",
+        "see": [
+            "locale"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "completeText",
+        "documentation": "A text that renders on the 'Complete' button. Set it to change the default text.",
+        "type": "string",
+        "see": [
+            "locale"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "questionTitleTemplate",
+        "documentation": "A template for a question title.",
+        "type": "string",
+        "see": [
+            "QuestionModel.title"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "getQuestionTitleTemplate",
+        "documentation": "Returns the question title template",
+        "type": "() => string",
+        "see": [
+            "questionTitleTemplate",
+            "QuestionModel.title"
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "showPageNumbers",
+        "documentation": "Set this property to false to turn off the numbering on pages titles.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true
+    },
+    {
+        "name": "showQuestionNumbers",
+        "documentation": "Set this property to false to turn off the numbering on questions titles.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "on",
+        "serializedChoices": [
+            "on",
+            "onPage",
+            "off"
+        ]
+    },
+    {
+        "name": "showProgressBar",
+        "documentation": "Set this property to \"top\" to show the progress bar on the bottom or to \"bottom\" to show it on the bottom.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "off",
+        "serializedChoices": [
+            "off",
+            "top",
+            "bottom"
+        ]
+    },
+    {
+        "name": "processedTitle",
+        "documentation": "Returns the text/html that renders as survey title.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "questionTitleLocation",
+        "documentation": "Set this property to 'bottom' to show question title under the question.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "top",
+        "serializedChoices": [
+            "top",
+            "bottom"
+        ]
+    },
+    {
+        "name": "mode",
+        "documentation": "Set this mode to 'display' to make the survey read-only. ",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": [],
+        "isSerialized": true,
+        "defaultValue": "edit",
+        "serializedChoices": [
+            "edit",
+            "display"
+        ]
+    },
+    {
+        "name": "data",
+        "documentation": "An object that stores the survey results/data. You may set it directly as { 'question name': questionValue, ... }",
+        "type": "any",
+        "see": [
+            "setValue",
+            "getValue"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "comments",
+        "documentation": "Returns all comments from the data.",
+        "type": "any",
+        "see": [
+            "data"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visiblePages",
+        "documentation": "Returns the list of visible pages. If all pages are visible then it is the same as pages property.",
+        "type": "PageModel[]",
+        "see": [
+            "pages",
+            "PageModel.visible",
+            "PageModel.visibleIf"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isEmpty",
+        "documentation": "Returns true if there is no any page in the survey. The survey is empty.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "pageCount",
+        "documentation": "Returns the survey pages count.",
+        "type": "number",
+        "see": [
+            "visiblePageCount",
+            "pages"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "visiblePageCount",
+        "documentation": "Returns the survey visible pages count",
+        "type": "number",
+        "see": [
+            "pageCount",
+            "visiblePages"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "currentPage",
+        "documentation": "Returns the current survey page. If survey is rendred then it is a page that a user can see/edit.",
+        "type": "PageModel",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "currentPageNo",
+        "documentation": "The index of the current page in the visible pages array. It starts from 0.",
+        "type": "number",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "focusFirstQuestion",
+        "documentation": "Set the input focuse to the first question with the input.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "state",
+        "documentation": "Returns the current survey state: 'loading' - loading from the json, 'completed' - a user has completed the survey, 'running' - a user answers a questions right now, 'empty' - there is nothing to show in the current survey.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "clear",
+        "documentation": "Clear the survey data and state. If the survey has a 'completed' state, it will have a 'running' state.",
+        "type": "(clearData?: boolean, gotoFirstPage?: boolean) => void",
+        "see": [
+            "data",
+            "state",
+            "currentPage"
+        ],
+        "parameters": [
+            {
+                "name": "clearData",
+                "documentation": "clear the data",
+                "type": "boolean"
+            },
+            {
+                "name": "gotoFirstPage",
+                "documentation": "make the first page as a current page.",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getProgress",
+        "documentation": "Returns the progress that a user made by answering on the survey.",
+        "type": "() => number",
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isNavigationButtonsShowing",
+        "documentation": "Returns true if navigation buttons: 'Prev', 'Next' or 'Complete' are shown.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isEditMode",
+        "documentation": "Returns true if the survey in the edit mode.",
+        "type": "boolean",
+        "see": [
+            "mode"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isDisplayMode",
+        "documentation": "Returns true if the survey in the display mode.",
+        "type": "boolean",
+        "see": [
+            "mode"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isDesignMode",
+        "documentation": "Returns true if the survey in the design mode. It is used by SurveyJS Editor",
+        "type": "boolean",
+        "see": [
+            "setDesignMode "
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "setDesignMode",
+        "documentation": "Call it to set the survey into the design mode.",
+        "type": "(value: boolean) => void",
+        "parameters": [
+            {
+                "name": "value",
+                "documentation": "use true to set the survey into the design mode.",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "hasCookie",
+        "documentation": "Returns true, if a user has already completed the survey on this browser and there is a cookie about it. Survey goes to 'completed' state if the function returns true.",
+        "type": "boolean",
+        "see": [
+            "cookieName",
+            "setCookie",
+            "deleteCookie  ",
+            "state"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "setCookie",
+        "documentation": "Set the cookie with cookieName in the browser. It is done automatically on survey complete if cookieName is not empty.",
+        "type": "() => void",
+        "see": [
+            "cookieName",
+            "hasCookie",
+            "deleteCookie  "
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "deleteCookie",
+        "documentation": "Delete the cookie with cookieName in the browser. ",
+        "type": "() => void",
+        "see": [
+            "cookieName",
+            "hasCookie",
+            "setCookie  "
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "nextPage",
+        "documentation": "Call it to go to the next page. It returns false, if it is the last page. If there is an error, for example required question is empty, the function returns false as well.",
+        "type": "() => boolean",
+        "see": [
+            "isCurrentPageHasErrors",
+            "prevPage",
+            "completeLastPage"
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isCurrentPageHasErrors",
+        "documentation": "Returns true, if there is any error on the current page. For example, the required question is empty or a question validation is failed.",
+        "type": "boolean",
+        "see": [
+            "nextPage"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "prevPage",
+        "documentation": "Call it to go to the previous page. It returns false if the current page is the first page already. It doesn't perform any checks, required questions can be empty.",
+        "type": "() => boolean",
+        "see": [
+            "isFirstPage"
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "completeLastPage",
+        "documentation": "Call it to complete the survey, if the current page is the last one. It returns false if there is an error on the page.",
+        "type": "() => boolean",
+        "see": [
+            "isCurrentPageHasErrors",
+            "nextPage"
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isFirstPage",
+        "documentation": "Returns true if the current page is the first one.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isLastPage",
+        "documentation": "Returns true if the current page is the last one.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "doComplete",
+        "documentation": "Call it to complete the survey. It writes cookie if cookieName property is not empty, set the survey into 'completed' state, fire onComplete event and sendResult into [dxsurvey.com](http://www.dxsurvey.com) service if surveyPostId property is not empty.",
+        "type": "() => void",
+        "see": [
+            "cookieName",
+            "state",
+            "onComplete",
+            "surveyPostId"
+        ],
+        "parameters": [],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isValidatingOnServer",
+        "documentation": "Returns true, if at the current moment the question values on the current page are validating on the server.",
+        "type": "boolean",
+        "see": [
+            "onServerValidateQuestions"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "processedCompletedHtml",
+        "documentation": "Returns the html for completed 'Thank you' page.",
+        "type": "string",
+        "see": [
+            "completedHtml"
+        ],
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "processedLoadingHtml",
+        "documentation": "Returns the html that shows on loading the json.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "progressText",
+        "documentation": "Returns the text for the current progress.",
+        "type": "string",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "uploadFile",
+        "documentation": "Upload the file into servey",
+        "type": "(name: string, file: File, storeDataAsText: boolean, uploadingCallback: (status: string) => any) ...",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "question name",
+                "type": "string"
+            },
+            {
+                "name": "file",
+                "documentation": "uploading file",
+                "type": "File"
+            },
+            {
+                "name": "storeDataAsText",
+                "documentation": "set it to true to encode file content into the survey results",
+                "type": "boolean"
+            },
+            {
+                "name": "uploadingCallback",
+                "documentation": "a call back function to get the status on uploading the file",
+                "type": "(status: string) => any"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "addPage",
+        "documentation": "Add a page into the survey",
+        "type": "(page: PageModel) => void",
+        "see": [
+            "addNewPage"
+        ],
+        "parameters": [
+            {
+                "name": "page",
+                "documentation": "",
+                "type": "PageModel"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "addNewPage",
+        "documentation": "Creates a new page and adds it into the survey",
+        "type": "(name: string) => PageModel",
+        "see": [
+            "addPage"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "a page name",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "removePage",
+        "documentation": "Remove the page from the survey",
+        "type": "(page: PageModel) => void",
+        "parameters": [
+            {
+                "name": "page",
+                "documentation": "",
+                "type": "PageModel"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getQuestionByName",
+        "documentation": "Returns a question by its name",
+        "type": "(name: string, caseInsensitive?: boolean) => IQuestion",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "a question name",
+                "type": "string"
+            },
+            {
+                "name": "caseInsensitive",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getQuestionsByNames",
+        "documentation": "Get a list of questions by their names",
+        "type": "(names: string[], caseInsensitive?: boolean) => IQuestion[]",
+        "parameters": [
+            {
+                "name": "names",
+                "documentation": "the array of names",
+                "type": "string[]"
+            },
+            {
+                "name": "caseInsensitive",
+                "documentation": "",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getPageByElement",
+        "documentation": "Returns a page on which an element (question or panel) is placed.",
+        "type": "(element: IElement) => PageModel",
+        "parameters": [
+            {
+                "name": "element",
+                "documentation": "Question or Panel",
+                "type": "IElement"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getPageByQuestion",
+        "documentation": "Returns a page on which a question is located",
+        "type": "(question: IQuestion) => PageModel",
+        "parameters": [
+            {
+                "name": "question",
+                "documentation": "",
+                "type": "IQuestion"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getPageByName",
+        "documentation": "Returns a page by it's name.",
+        "type": "(name: string) => PageModel",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getPagesByNames",
+        "documentation": "Rertuns a list of pages by their names",
+        "type": "(names: string[]) => PageModel[]",
+        "parameters": [
+            {
+                "name": "names",
+                "documentation": "a list of pages names",
+                "type": "string[]"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getAllQuestions",
+        "documentation": "Returns the list of all questions in the survey",
+        "type": "(visibleOnly?: boolean) => IQuestion[]",
+        "parameters": [
+            {
+                "name": "visibleOnly",
+                "documentation": "set it true, if you want to get only visible questions",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "sendResult",
+        "documentation": "Send the survey result into [dxsurvey.com](http://www.dxsurvey.com) service.",
+        "type": "(postId?: string, clientId?: string, isPartialCompleted?: boolean) => void",
+        "see": [
+            "surveyPostId",
+            "clientId"
+        ],
+        "parameters": [
+            {
+                "name": "postId",
+                "documentation": "[dxsurvey.com](http://www.dxsurvey.com) service postId",
+                "type": "string"
+            },
+            {
+                "name": "clientId",
+                "documentation": "Typically a customer e-mail or an identificator",
+                "type": "string"
+            },
+            {
+                "name": "isPartialCompleted",
+                "documentation": "Set it to true if the survey is not completed yet and it is an intermediate results",
+                "type": "boolean"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getResult",
+        "documentation": "It calls the [dxsurvey.com](http://www.dxsurvey.com) service and on callback fires onGetResult event with all answers that your users made for a question.",
+        "type": "(resultId: string, name: string) => void",
+        "see": [
+            "onGetResult"
+        ],
+        "parameters": [
+            {
+                "name": "resultId",
+                "documentation": "[dxsurvey.com](http://www.dxsurvey.com) service resultId",
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "documentation": "The question name",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "loadSurveyFromService",
+        "documentation": "Loads the survey Json from the [dxsurvey.com](http://www.dxsurvey.com) service.",
+        "type": "(surveyId?: string) => void",
+        "parameters": [
+            {
+                "name": "surveyId",
+                "documentation": "[dxsurvey.com](http://www.dxsurvey.com) service surveyId",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "isLoadingFromJson",
+        "documentation": "Returns true if the survey is loading from Json at the current moment.",
+        "type": "boolean",
+        "className": "SurveyModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "getVariable",
+        "documentation": "Returns a variable value. Variable, unlike values, are not stored in the survey results.",
+        "type": "(name: string) => any",
+        "see": [
+            "SetVariable"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "A variable name",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "setVariable",
+        "documentation": "Sets a variable value. Variable, unlike values, are not stored in the survey results.",
+        "type": "(name: string, newValue: any) => void",
+        "see": [
+            "GetVariable"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "A variable name",
+                "type": "string"
+            },
+            {
+                "name": "newValue",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getValue",
+        "documentation": "Returns a question value",
+        "type": "(name: string) => any",
+        "see": [
+            "data",
+            "setValue"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "A question name",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "setValue",
+        "documentation": "Sets a question value. It runs all triggers and conditions (visibleIf properties). Goes to the next page if goNextPageAutomatic is true and all questions on the current page are answered correctly.",
+        "type": "(name: string, newValue: any) => void",
+        "see": [
+            "data",
+            "getValue",
+            "PageModel.visibleIf",
+            "QuestionBase.visibleIf",
+            "goNextPageAutomatic"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "A question name",
+                "type": "string"
+            },
+            {
+                "name": "newValue",
+                "documentation": "",
+                "type": "any"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "getComment",
+        "documentation": "Returns the comment value",
+        "type": "(name: string) => string",
+        "see": [
+            "setComment"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "setComment",
+        "documentation": "Set the comment value",
+        "type": "(name: string, newValue: string) => void",
+        "see": [
+            "getComment "
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "",
+                "type": "string"
+            },
+            {
+                "name": "newValue",
+                "documentation": "",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "clearValue",
+        "documentation": "Remove the value from the survey result.",
+        "type": "(name: string) => void",
+        "parameters": [
+            {
+                "name": "name",
+                "documentation": "The name of the value. Typically it is a question name",
+                "type": "string"
+            }
+        ],
+        "className": "SurveyModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "surveyElementName",
+        "documentation": "",
+        "type": "string",
+        "className": "SurveyWindowModel",
+        "pmeType": "property",
+        "parameters": []
+    },
+    {
+        "name": "getType",
+        "documentation": "",
+        "type": "() => string",
+        "parameters": [],
+        "className": "SurveyWindowModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "survey",
+        "documentation": "A survey object.",
+        "type": "SurveyModel",
+        "see": [
+            "SurveyModel"
+        ],
+        "className": "SurveyWindowModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isShowing",
+        "documentation": "Returns true if the window is currently showing.",
+        "type": "boolean",
+        "className": "SurveyWindowModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "isExpanded",
+        "documentation": "Returns true if the window is expanded.",
+        "type": "boolean",
+        "see": [
+            "expand",
+            "collapse"
+        ],
+        "className": "SurveyWindowModel",
+        "pmeType": "property",
+        "hasSet": false,
+        "parameters": []
+    },
+    {
+        "name": "title",
+        "documentation": "The window and survey title.",
+        "type": "string",
+        "className": "SurveyWindowModel",
+        "pmeType": "property",
+        "hasSet": true,
+        "parameters": []
+    },
+    {
+        "name": "expand",
+        "documentation": "Expand the window to show the survey.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "SurveyWindowModel",
+        "pmeType": "method"
+    },
+    {
+        "name": "collapse",
+        "documentation": "Collapse the window and show survey title only.",
+        "type": "() => void",
+        "parameters": [],
+        "className": "SurveyWindowModel",
+        "pmeType": "method"
+    }
+]

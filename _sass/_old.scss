@@ -1,0 +1,235 @@
+.topmenu > li.active {
+  border-top: 4px solid #19aa8d;
+    border-left: none;
+}
+
+
+.surveycontent {
+    align-content: center;
+    width:100%;
+}
+.examplesidebar {
+    float:left;
+    left:0;
+    background-color: #2f4050;
+    width:220px;
+}
+.examplecontent {
+    margin-left: 220px;
+}
+.exampleoptions {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+span.navy {
+  color: #1ab394;
+}
+a.navy-link {
+  color: #1ab394;
+  text-decoration: none;
+}
+
+/*overrides*/
+.nav > li.active {
+    border-left: none;
+}
+
+.nav.navbar-right > li > a {
+    color: #676A6C;;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 1300px;
+    }
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background: none;
+    border-color: #dddddd #dddddd rgba(0, 0, 0, 0);
+    border-bottom: #fff;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #555555;
+    cursor: default;
+}
+
+.nav-tabs > li > a {
+    color: #676a6c;
+}
+
+.nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+    background-color: transparent;
+    color: #676a6c;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #1ab394;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.form-control:focus, .single-line:focus {
+    border-color: #e5e6e7 !important;
+}
+
+/*EO overrides*/
+
+.maincontent pre[class*="language-"] {
+    background-color: white;
+    border-radius: 0;
+    border: 1px solid #e7eaec;
+}
+
+.main-btn {
+    width: 165px;
+    height: 50px;
+    margin-left: -15px;
+    border-radius: 0;
+    background-image: url("/images/main_btn.png");
+}
+.main-btn:active {
+    background-image: url("/images/main_btn.png");
+    box-shadow: none;
+}
+@media (max-width: 767px) {
+    .main-btn {
+        margin-left: 0;
+    }
+}
+
+.features .panel-footer {
+    background-color: #fff;
+    border: none;
+    padding: 0 0 0 30px;
+}
+.features h3 {
+    font-size: 20px;
+}
+.features .panel {
+    margin-bottom: 20px;
+}
+@media (max-width: 1300px) {
+    .features h3 {
+        font-size: 18px;
+    }
+}
+.features a:hover {
+    text-decoration: underline;
+}
+.features .panel-body {
+    height: 120px;
+}
+@media (max-width: 1199px) {
+    .features .panel-body {
+        height: 85px;
+    }
+}
+@media (max-width: 767px) {
+    .features .panel-body {
+        height: 105px;
+    }
+}
+
+
+
+
+/*examples*/
+
+
+
+.nav-second-level.nav > li.active > a:hover,
+.nav-second-level.nav > li.active > a:focus,
+.nav-second-level.nav > li.active > a {
+    background-color: #192732;
+}
+
+.nav-second-level.nav > li.active > a:before {
+    background-color: #1ab394;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40px;
+}
+
+.nav-second-level.nav > li.active > a:after {
+    background-color: #1ab394;
+    width: 3px;
+    height: 100%;
+    border-radius: 4px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.custom-select {
+    background-image: url("/images/custom_select_arrow.png");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.custom-select > select {
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+.examples-wrapper {
+    background-color: #2f4050;
+}
+
+.maincontent .examplecontent {
+    background-color: #f4f4f4;
+}
+
+.survey-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.source-code-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.cr-rating .cr-item {
+    display: inline-block;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.cr-rating .cr-item .cr-label {
+    border: 1px solid green;
+    background-color: #1ab394;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/*image picker*/
+.examples-wrapper ul.thumbnails.image_picker_selector li .thumbnail.selected {
+    background: #1ab394;
+}
+.examples-wrapper ul.thumbnails.image_picker_selector li .thumbnail {
+    padding: 10px;
+}
+/*EO image picker*/

@@ -1,0 +1,60 @@
+<div class="propertyitem">
+    <p>
+    Question required text: <input type="text" value="* " onChange="survey.requiredText = this.value; survey.render();"/> default is "* ".
+    <pre><code class="language-javascript">survey.requiredText = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+    Show question numbers: <select onChange="survey.showQuestionNumbers = this.value; survey.render();">
+        <option value="on" selected="true">on</option>
+        <option value="onPage">onPage</option>
+        <option value="off">off</option>
+    </select> default is 'on'. 'onPage' - set question numbers inside one page.
+    <pre><code class="language-javascript">survey.showQuestionNumbers = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+    Show survey title: <input type="checkbox" checked="true" onChange="survey.showTitle = this.checked; survey.render();"/> default is true.
+    <pre><code class="language-javascript">survey.showTitle = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+Show page titles: <input type="checkbox" checked="true" onChange="survey.showPageTitles = this.checked; survey.render();"/> default is true.
+<pre><code class="language-javascript">survey.showPageTitles = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+    Show page numbers: <input type="checkbox" onChange="survey.showPageNumbers = this.checked; survey.render();"/> default is false.
+    <pre><code class="language-javascript">survey.showPageNumbers = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+        <b>Show progress bar: </b> (default is 'off')
+        <select style="width:100%" onChange="survey.showProgressBar = this.value; survey.render();">
+            <option value="off">off</option>
+            <option value="top">top</option>
+            <option value="bottom" selected="true">bottom</option>
+        </select>
+        <pre><code class="language-javascript">survey.showProgressBar = yourvalue;
+survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+    <b>Show completed page:</b><input type="checkbox" checked="true" onChange="survey.showCompletedPage = this.checked; survey.render();"/> default is true. Set it to false to hide the Survey on pressing the 'Complete' button.
+    <pre><code class="language-javascript">survey.showCompletedPage = yourValue; survey.render();</code></pre>
+    </p>
+</div>
+<div class="propertyitem">
+    <p>
+        <b>Html for completed page:</b> If empty (default value), the built-in html is used.
+        <textarea style="width:100%" rows="4" onChange="survey.completedHtml = this.value; survey.render();"></textarea>
+        <pre><code class="language-javascript">survey.completedHtml = yourvalue;
+survey.render();</code></pre>
+    </p>
+</div>

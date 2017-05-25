@@ -1,0 +1,16 @@
+{
+ questionTitleLocation: "bottom", showQuestionNumbers: "off",
+ pages: [
+  { name: "Address",  title: "Address",
+   questions: [
+    { type: "text", name: "address1", title: "Street Address" },
+    { type: "text", name: "address2", title: "Address Line 2" },
+    { type: "text", name: "city", title: "City" },
+    { type: "text", name: "state", startWithNewLine: false, title: "State / Province / Region" },
+    { type: "text", name: "zip", title: "Zip / Postal Code" },
+    { type: "dropdown", name: "country", startWithNewLine: false, title: "Country",
+        choicesByUrl: {url: "http://services.groupkt.com/country/get/all", path: "RestResponse;result", valueName: "name"}    }
+   ]
+  }
+ ]
+}

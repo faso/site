@@ -1,0 +1,18 @@
+markdown: kramdown
+
+surveyjs_version: "0.12.15"
+
+sass:
+    sass_dir: _sass
+    
+include:
+  - ".nojekyll"
+
+exclude:
+  - "Gemfile"
+  - "Gemfile.*"
+  - "Rakefile"
+  - "README.md"
+  - "node_modules"
+  - "tmp"
+  - "packages"

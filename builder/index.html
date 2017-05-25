@@ -1,0 +1,43 @@
+---
+layout: default
+useknockout: true
+title: Visual Editor for JavaScript JSON based Survey Library
+mainmenukey: builder
+pathprefix: ../
+canonicalUrl: /builder/
+usebootstrap: true
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/worker-json.js" type="text/javascript" charset="utf-8"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/mode-json.js" type="text/javascript" charset="utf-8"></script> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script> 
+<link href="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/surveyeditor.css" type="text/css" rel="stylesheet" />
+<link href="{{ site.baseurl }}/css/custom-surveyeditor.css" type="text/css" rel="stylesheet" />
+<script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/surveyeditor.js"></script>
+
+<div id="manage" data-bind="template: 'surveys-manage'" style="position: relative;"></div>
+<style>
+    #manage .svd-manage .svd-manage-buttons { top: 0; }
+</style>
+<div id="editor" class="survey-editor"></div>
+<script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        url = url.toLowerCase(); // This is just to avoid case sensitiveness  
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    var editor = new SurveyEditor.SurveyEditor("editor", {showEmbededSurveyTab: true, showOptions: true, showState: true, generateValidJSON : false});
+    var manager = new SurveyEditor.SurveysManager("https://dxsurvey.com", "a797f29b53f8455e8b3ef317f8904dac", editor);
+    ko.applyBindings(manager, document.getElementById("manage"));
+    editor.toolbarItems.push(manager.toolbarItem);
+    var surveyId = getParameterByName("surveyid");
+    if(surveyId) {
+        editor.loadSurvey(surveyId);
+    }
+</script>

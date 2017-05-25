@@ -1,0 +1,9 @@
+.git/*
+_site/*
+.idea
+.vscode
+.sass-cache
+tmp
+packages
+node_modules/*
+Gemfile.lock

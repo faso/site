@@ -1,0 +1,42 @@
+<nav class="navbar-default navbar-static-side menu-sidebar" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+        {% for category in site.data.docs.categories %}
+            <li {% if category.name == page.doc_category %}class="active"{% endif %} class="category-name">
+                <span>{{category.title}}</span>
+                <ul id="docs-{{category.name}}" class="nav nav-second-level">
+                {% assign category_pages = (site.data.docs.pages | where: "category" , category.name) %}
+                {% for doc_page in category_pages %}
+                    <li {% if doc_page.name == page.doc_name %}class="active"{% endif %}>
+                        <a href="{{ site.baseurl }}/docs/{{doc_page.name  | append: '.html'}}">
+                            <div>{{doc_page.title}}</div>
+                        </a>
+                    </li>
+                {% endfor %}    
+                {% if category.name == "api" %}
+                    {% for classItem in site.data.docs.classes %}
+                    <li {% if classItem.name == page.doc_name %}class="active"{% endif %}>
+                        <a href="{{ site.baseurl }}/docs/api_{{classItem.name  | append: '.html'}}">
+                            <div>{{classItem.title}}</div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </li>
+        {% endfor %}
+        </ul>        
+    </div>
+</nav>
+
+<script type="text/javascript">
+    function doExpand(categoryName) {
+        var ulCategory = document.getElementById("docs-" + categoryName);
+        if(!ulCategory) return;
+        var display = ulCategory.style.display;
+        ulCategory.style.display = display == "none" ? "" : "none";
+        var imgCategory = document.getElementById("img-" + categoryName);
+        if(!imgCategory) return;
+        imgCategory.className = display == "none" ? "glyphicon pull-right glyphicon-chevron-up" : "glyphicon pull-right glyphicon-chevron-down";
+    }
+</script>
