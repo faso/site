@@ -3,33 +3,29 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>survey.js : {{ page.title }}</title>
-        <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css"/>
-        <link href="{{ site.baseurl }}/css/style.css" type="text/css" rel="stylesheet" /> 
+        <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css"/>
+        <link href="{{ site.baseurl }}/css/style.css" type="text/css" rel="stylesheet" />
         <link href="{{ site.baseurl }}/css/main.css" type="text/css" rel="stylesheet" />
         <link href="{{ site.baseurl }}/css/custom-checkbox.css" type="text/css" rel="stylesheet" />
         {% if page.usedxchart or page.usebootstrap or page.jquery or page.usejquery%}
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         {% endif %}
         {% if page.usedxchart%}
-        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>        
+        <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
         <script type="text/javascript" src="https://cdn3.devexpress.com/jslib/15.1.5/js/dx.chartjs.js"></script>
         {% endif %}
         {% if page.usebootstrap%}
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         {% endif %}
+
         {% if page.usereact%}
         <script src="https://fb.me/react-0.14.8.js"></script>
         <script src="https://fb.me/react-dom-0.14.8.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.react.js"></script>
         {% elsif page.useknockout%}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.ko.js"></script>
-        {% elsif page.usejquery%}
-        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.jquery.js"></script>
         {% elsif page.useangular%}
         <!-- The stuff Angular 2 needs -->
-
         <script src="{{ site.baseurl }}/js/angular2/zone.min.js"></script>
         <script src="{{ site.baseurl }}/js/angular2/shim.min.js"></script>
         <script src="{{ site.baseurl }}/js/angular2/Reflect.js"></script>
@@ -39,11 +35,8 @@
         <script src="{{ site.baseurl }}/js/angular2/angular.compiler.umd.js"></script>
         <script src="{{ site.baseurl }}/js/angular2/angular.platform-browser.umd.js"></script>
         <script src="{{ site.baseurl }}/js/angular2/angular.platform-browser-dynamic.umd.js"></script>
-
-        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.angular.js"></script>
         {% elsif page.usevue%}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
-        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.vue.js"></script>
         {% endif %}
         <link href="{{ site.baseurl }}/css/prism.css" type="text/css" rel="stylesheet" />
         <script src="{{ site.baseurl }}/js/prism.js"></script>
@@ -52,6 +45,35 @@
         <link href="https://cdn3.devexpress.com/jslib/16.2.4/css/dx.common.css" type="text/css" rel="stylesheet">
         <link href="https://cdn3.devexpress.com/jslib/16.2.4/css/dx.light.css" type="text/css" rel="stylesheet">
         {% endif %}
+
+        <!-- adding surveyjs-->
+        {% if jekyll.environment == "production" %}
+        {% if page.usereact%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.react.js"></script>
+        {% elsif page.useknockout%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.ko.js"></script>
+        {% elsif page.usejquery%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.jquery.js"></script>
+        {% elsif page.useangular%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.angular.js"></script>
+        {% elsif page.usevue%}
+        <script src="https://surveyjs.azureedge.net/{{ site.surveyjs_version }}/survey.vue.js"></script>
+        {% endif %}
+        {% endif %}
+        {% if jekyll.environment == "development" %}
+        {% if page.usereact%}
+        <script src="http://127.0.0.1:7777/packages/survey-react/survey.react.js"></script>
+        {% elsif page.useknockout%}
+        <script src="http://127.0.0.1:7777/packages/survey-knockout/survey.ko.js"></script>
+        {% elsif page.usejquery%}
+        <script src="http://127.0.0.1:7777/packages/survey-jquery/survey.jquery.js"></script>
+        {% elsif page.useangular%}
+        <script src="http://127.0.0.1:7777/packages/survey-angular/survey.angular.js"></script>
+        {% elsif page.usevue%}
+        <script src="http://127.0.0.1:7777/packages/survey-vue/survey.vue.js"></script>
+        {% endif %}
+        {% endif %}
+        <!-- EO adding surveyjs-->
     </head>
     <body class="white-bg">
         {% include menu-top.html %}

@@ -3,6 +3,7 @@ require "jekyll"
 namespace :site do
   desc "Publish site to gh-pages"
   task :publish do
+    ENV["JEKYLL_ENV"] = "production"
     Jekyll::Site.new(Jekyll.configuration({
       "source"      => ".",
       "destination" => "_site",
