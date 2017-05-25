@@ -4,7 +4,7 @@ module Jekyll
     def initialize(site, base, dir, platform, example)
       @site = site
       @base = base
-      @dir = dir
+      @dir = File.join(dir, example['name'])
       @name = example['name'] + '.html'
 
       self.process(@name)
@@ -34,6 +34,30 @@ module Jekyll
     end
   end
 
+  class ExamplePageJS < Page
+    def initialize(site, base, dir, platform, example)
+      @site = site
+      @base = base
+      @dir = File.join(dir, example['name'])
+      @name = example['name'] + '.js'
+
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'example_template.js')
+    end
+  end
+
+  class ExamplePageCss < Page
+    def initialize(site, base, dir, platform, example)
+      @site = site
+      @base = base
+      @dir = File.join(dir, example['name'])
+      @name = example['name'] + '.css'
+
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'example_template.css')
+    end
+  end
+
   class ExamplePagesGenerator < Generator
     safe true
 
@@ -44,6 +68,8 @@ module Jekyll
           name = platform['name']
           site.data['examples_'].each do |exampleDescription|
             site.pages << ExamplePage.new(site, site.source, File.join(dir, name), name, exampleDescription)
+            site.pages << ExamplePageJS.new(site, site.source, File.join(dir, name), name, exampleDescription)
+            site.pages << ExamplePageCss.new(site, site.source, File.join(dir, name), name, exampleDescription)
           end
         end
       # end
