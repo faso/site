@@ -5,7 +5,7 @@ module Jekyll
       @site = site
       @base = base
       @dir = File.join(dir, example['name'])
-      @name = example['name'] + '.html'
+      @name = 'index.html'
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'example_template.html')
@@ -13,7 +13,18 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
-      self.data['includes'] = example['includes'] || ["examplesetups/standard.md", "live-example-code.html"]
+      self.data['includes'] = example['includes'] || [
+        "live-example-code.html"
+      ]
+      self.data['includesHTML'] = example['includesHTML'] || [
+        "examplesetups/standard/index.html.md"
+      ]
+      self.data['includesJS'] = example['includesJS'] || [
+        "examplesetups/standard/index.js.md"
+      ]
+      self.data['includesCSS'] = example['includesCSS'] || [
+        "examplesetups/standard/index.css.md"
+      ]
 
       self.data['hasColumnCount'] = example['hasColumnCount']
       self.data['propertiesFile'] = example['propertiesFile']
@@ -34,27 +45,60 @@ module Jekyll
     end
   end
 
-  class ExamplePageJS < Page
+  class ExampleHTML < Page
     def initialize(site, base, dir, platform, example)
       @site = site
       @base = base
-      @dir = File.join(dir, example['name'])
-      @name = example['name'] + '.js'
+      @dir = File.join(dir, example['name'] + '/content')
+      @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'example_template.js')
+      self.read_yaml(File.join(base, '_layouts'), 'example_content_html.md')
+
+      use_platform_key = "use#{platform}"
+      self.data[use_platform_key] = true
+
+      self.data['includeHTML'] = example['includeHTML'] || [
+        "examplesetups/standard/index.html.md"
+      ]
     end
   end
 
-  class ExamplePageCss < Page
+  class ExampleJS < Page
     def initialize(site, base, dir, platform, example)
       @site = site
       @base = base
-      @dir = File.join(dir, example['name'])
-      @name = example['name'] + '.css'
+      @dir = File.join(dir, example['name'] + '/content')
+      @name = 'index.js'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'example_template.css')
+      self.read_yaml(File.join(base, '_layouts'), 'example_content_js.md')
+
+      use_platform_key = "use#{platform}"
+      self.data[use_platform_key] = true
+
+      self.data['includeJS'] = example['includeJS'] || [
+        "examplesetups/standard/index.js.md"
+      ]
+    end
+  end
+
+  class ExampleCSS < Page
+    def initialize(site, base, dir, platform, example)
+      @site = site
+      @base = base
+      @dir = File.join(dir, example['name'] + '/content')
+      @name = 'index.css'
+
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'example_content_css.md')
+
+      use_platform_key = "use#{platform}"
+      self.data[use_platform_key] = true
+
+      self.data['includeCSS'] = example['includeCSS'] || [
+        "examplesetups/standard/index.css.md"
+      ]
     end
   end
 
@@ -68,8 +112,9 @@ module Jekyll
           name = platform['name']
           site.data['examples_'].each do |exampleDescription|
             site.pages << ExamplePage.new(site, site.source, File.join(dir, name), name, exampleDescription)
-            site.pages << ExamplePageJS.new(site, site.source, File.join(dir, name), name, exampleDescription)
-            site.pages << ExamplePageCss.new(site, site.source, File.join(dir, name), name, exampleDescription)
+            site.pages << ExampleHTML.new(site, site.source, File.join(dir, name), name, exampleDescription)
+            site.pages << ExampleJS.new(site, site.source, File.join(dir, name), name, exampleDescription)
+            site.pages << ExampleCSS.new(site, site.source, File.join(dir, name), name, exampleDescription)
           end
         end
       # end
@@ -77,4 +122,3 @@ module Jekyll
   end
 
 end
-

@@ -2,6 +2,18 @@
 layout: example
 ---
 
+{% for include in page.includesHTML %}
+    {% include {{include}} %}
+{% endfor %}
+
+{% for include in page.includesJS %}
+    {% include {{include}} %}
+{% endfor %}
+
+{% for include in page.includesCSS %}
+    {% include {{include}} %}
+{% endfor %}
+
 {% for include in page.includes %}
     {% include {{include}} %}
-{% endfor %}    
+{% endfor %}

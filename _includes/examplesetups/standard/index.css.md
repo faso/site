@@ -1,0 +1,3 @@
+.sych {
+    color: red;
+}
