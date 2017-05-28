@@ -179,7 +179,7 @@ mainmenukey: doc
             }
         }
         this.hasParameters = this.parameters.length > 0;
-        this.hasSet = item.hasSet == "true";
+        this.hasSet = item.hasSet !== "false";
         this.propertySet = this.hasSet ? " writable" : " readonly";
         this.isSerialized = item.isSerialized == "true";
         this.koExpanded = ko.observable(false);
