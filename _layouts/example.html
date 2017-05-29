@@ -6,13 +6,19 @@ mainmenukey: examples
 
 <div class="examples-wrapper">
     {% include menu-examples.html %}
-    
+  
     <div class="examplecontent wrapper wrapper-content">
         <div class="row">
             <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
                 <h3 class="contenttitle">{{ page.title }}</h3>
+
+                <div>
+                    <button onclick="restartIFrame()">Rerun Survey</button>
+                </div>
                 
-                <iframe src="./content" class="display-example-iframe" width="100%" onload="onLoadIFrame(this)"></iframe>
+                <div class="survey-container">
+                    <iframe src="./content" class="display-example-iframe" frameborder="0" width="100%" onload="onLoadIFrame(this)"></iframe>
+                </div>
 
                 <div class="row source-code-container">
                     {% if page.title != 'Live examples' %}
@@ -30,45 +36,15 @@ mainmenukey: examples
     </div>
 
     <script>
-        var windowMe = window;
-
         function onLoadIFrame(iframe) {
             var frameContent = iframe.contentWindow;
-            windowMe.survey = frameContent.survey;
-            iframe.height = frameContent.document.body.scrollHeight + "px";
+            window.survey = frameContent.survey;
+            iframe.height = frameContent.document.body.offsetHeight + "px";
         }
-    </script>
 
-
-
-    <script>
-    function reRunSurvey() {
-        {% if page.keepSurveyData %}    
-        survey.clear(false, true);
-        {% else %}
-        survey.clear();
-        {% endif %}
-        survey.render('survey');
-    }
-    {% if page.useknockout != true %}
-        {% if page.disablereRun %}
-        document.getElementById('btnreRun').style.display = 'none';
-        {% endif %}
-    {% else %}
-    function renderSurvey() {
-        if(typeof survey == 'undefined') return;
-        survey.onComplete.add(function (s) {
-            var result = "\nThe results are:\n" + JSON.stringify(survey.data);
-            document.getElementById('survey_result').innerHTML = result;
-            document.getElementById('survey_oncomplete').style.display = '';
-            {% if page.disablereRun %}
-            document.getElementById('btnreRun').style.display = 'none';
-            {% endif %}
-        });
-        survey.render("surveyElement");
-    }
-
-    renderSurvey();
-    {% endif %}
+        function restartIFrame() {
+            var iframe = document.querySelector('.display-example-iframe');
+            iframe.src = iframe.src;
+        }
     </script>
 </div>

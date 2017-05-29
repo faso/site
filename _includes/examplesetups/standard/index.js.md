@@ -1,6 +1,10 @@
-Survey.defaultBootstrapCss.navigationButton = "btn btn-primary";
 Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
 window.survey = new Survey.Model({% include {{page.dataFile}} %});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
 
 {% if page.usereact %}
 ReactDOM.render(<Survey.Survey model={survey} />, document.getElementById("surveyElement"));
