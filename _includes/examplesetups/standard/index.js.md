@@ -1,6 +1,6 @@
 Survey.defaultBootstrapCss.navigationButton = "btn btn-primary";
 Survey.Survey.cssType = "bootstrap";
-var survey = new Survey.Model({% include {{page.dataFile}} %});
+window.survey = new Survey.Model({% include {{page.dataFile}} %});
 
 {% if page.usereact %}
 ReactDOM.render(<Survey.Survey model={survey} />, document.getElementById("surveyElement"));

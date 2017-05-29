@@ -8,7 +8,7 @@ module Jekyll
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'example_template.html')
+      self.read_yaml(File.join(base, '_layouts'), 'example_template.md')
 
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true

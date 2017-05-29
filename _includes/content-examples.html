@@ -2,46 +2,11 @@
     <div class="row">
         <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
             <h3 class="contenttitle">{{ page.title }}</h3>
-            {% if page.fiddle %}
-                <div class="row source-code-container">
-                    {% include platform-selector.html %}
-                    {% if page.usereact %}
-                    <iframe width="100%" height="725" src="//jsfiddle.net/surveyjs/o6fpdcff/embedded/result,js,html,css,resources/?fontColor=333333&accentColor=1ab394&bodyColor=fff&menuColor=fff" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    {% elsif page.useknockout %}
-                    <iframe width="100%" height="725" src="//jsfiddle.net/surveyjs/ox5nt4u6/embedded/result,js,html,css,resources/?fontColor=333333&accentColor=1ab394&bodyColor=fff&menuColor=fff" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    {% elsif page.usejquery %}
-                    <iframe width="100%" height="725" src="//jsfiddle.net/surveyjs/ta28uz5d/embedded/result,js,html,css,resources/?fontColor=333333&accentColor=1ab394&bodyColor=fff&menuColor=fff" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    {% elsif page.useangular %}
-                    <iframe width="100%" height="725" src="//jsfiddle.net/surveyjs/h18s304y/embedded/result,js,html,css,resources/?fontColor=333333&accentColor=1ab394&bodyColor=fff&menuColor=fff" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    {% elsif page.usevue %}
-                    <iframe width="100%" height="725" src="//jsfiddle.net/surveyjs/Ljoz9wht/embedded/result,js,html,css,resources/?fontColor=333333&accentColor=1ab394&bodyColor=fff&menuColor=fff" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                    {% endif %}
-                </div>
-            {% else %}
             {% if page.preSurvey %}
             {% include {{page.preSurvey}} %}
             {% endif %}
-            {% if page.title != 'Live examples' %}
-                {% if page.useangular %}
-                    <ng-app></ng-app>
-                {% else %}
-                    <div id="surveyContainer" class="survey-container contentcontainer  codecontainer">
-                        <div id="surveyElement">
-                            {% if page.usevue %}
-                                <survey :survey='survey'/>
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endif %}
-                <div id="survey_oncomplete" class="contentcontainer codecontainer" style="display:none">
-                    <div id="survey_result"></div>
-                    <input id="btnreRun" type="button" onclick="
-                                    document.getElementById('surveyContainer').style.display = '';
-                                    document.getElementById('survey_oncomplete').style.display = 'none';
-                                    reRunSurvey();"
-                           value="Re-run survey"></input>
-                </div>
-            {% endif %}
+            
+            <iframe id="displayExample" src="./content" width="100%"></iframe>
 
             <div class="row source-code-container">
                 {% if page.title != 'Live examples' %}
@@ -55,6 +20,13 @@
             {% include {{page.propertiesFile}} %}
         </div>
         {% endif %}
-        {% endif %}
     </div>
 </div>
+
+<script>
+    var iframe = document.getElementById("displayExample");
+    var windowMe = window;
+    iframe.onload = function() {
+        windowMe.survey = iframe.contentWindow.survey;
+    }
+</script>
