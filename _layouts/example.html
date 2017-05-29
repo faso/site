@@ -9,9 +9,13 @@ mainmenukey: examples
   
     <div class="examplecontent wrapper wrapper-content">
         <div class="row">
-            <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
-                <h3 class="contenttitle">{{ page.title }}</h3>
+            <h3 class="contenttitle">{{ page.title }}</h3>
 
+            {% if page.title != 'Live examples' %}
+            {% include platform-selector.html %}
+            {% endif %}
+
+            <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
                 <div>
                     <button onclick="restartIFrame()">Rerun Survey</button>
                 </div>
@@ -21,9 +25,6 @@ mainmenukey: examples
                 </div>
 
                 <div class="row source-code-container">
-                    {% if page.title != 'Live examples' %}
-                        {% include platform-selector.html %}
-                    {% endif %}
                     {{ content }}
                 </div>
             </div>
