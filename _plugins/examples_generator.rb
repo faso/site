@@ -16,7 +16,7 @@ module Jekyll
       self.data['includes'] = example['includes'] || [
         "live-example-code.html"
       ]
-      self.data['includesHTML'] = example['includesHTML'] || [
+      self.data['includesHTML'] = example['includeHTML'] || [
         "examplesetups/standard/index.html.md"
       ]
       self.data['includesJS'] = example['includesJS'] || [
@@ -58,9 +58,7 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
-      self.data['includeHTML'] = example['includeHTML'] || [
-        "examplesetups/standard/index.html.md"
-      ]
+      self.content = File.read(base + '/_includes/' + example['contentHTML'])
     end
   end
 
@@ -77,9 +75,7 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
-      self.data['includeJS'] = example['includeJS'] || [
-        "examplesetups/standard/index.js.md"
-      ]
+      self.content = File.read(base + '/_includes/' + example['contentJS'])
     end
   end
 
@@ -96,9 +92,7 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
-      self.data['includeCSS'] = example['includeCSS'] || [
-        "examplesetups/standard/index.css.md"
-      ]
+      self.content = File.read(base + '/_includes/' + example['contentCSS'])
     end
   end
 
