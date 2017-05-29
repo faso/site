@@ -8,12 +8,13 @@
     <script src="https://unpkg.com/survey-knockout"></script>
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
     <div id="surveyElement">
     </div>
+
     <script src="./index.js"></script>
 </body>
 {% elsif page.usereact%}
@@ -26,7 +27,7 @@
     <script src="https://unpkg.com/survey-react"></script>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
     <script src="https://unpkg.com/survey-angular"></script>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
     <script src="https://unpkg.com/survey-jquery"></script>
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -80,11 +81,11 @@
 
     <script src="https://unpkg.com/survey-vue"></script>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <div id="app">
+    <div id="surveyElement">
         <survey :survey='survey'/>
     </div>
     <script src="./index.js"></script>

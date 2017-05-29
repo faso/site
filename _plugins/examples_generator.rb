@@ -69,6 +69,8 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
+      self.data['dataFile'] = example['dataFile'] || "surveys/#{example['name']}.json"
+
       self.content = File.read(base + '/_includes/' + example['contentJS'])
     end
   end
