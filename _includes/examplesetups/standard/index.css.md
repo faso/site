@@ -1,3 +1,3 @@
-.sych {
+.some {
     color: red;
 }

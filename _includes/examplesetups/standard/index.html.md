@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
-{% if page.usereact %}
-{% elsif page.useknockout%}
+{% if page.useknockout%}
 <head>
     <title>Welcome to Knockout</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
 
     <script src="https://unpkg.com/survey-knockout"></script>
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div id="surveyElement">
     </div>
     <script src="./index.js"></script>
+</body>
+{% elsif page.usereact%}
+<head>
+    <title>Welcome to React</title>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+
+    <script src="https://unpkg.com/survey-react"></script>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="surveyElement">
+    </div>
+    <script type="text/babel" src="./index.js"></script>
 </body>
 {% elsif page.useangular%}
 <head>
@@ -29,6 +48,8 @@
 
     <script src="https://unpkg.com/survey-angular"></script>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -36,14 +57,14 @@
     <script src="./index.js"></script>
 </body>
 {% elsif page.usejquery%}
-<!DOCTYPE html>
-<html>
 <head>
     <title>Welcome to JQuery</title>
     <script src="https://unpkg.com/jquery"></script>
 
     <script src="https://unpkg.com/survey-jquery"></script>
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -51,16 +72,15 @@
     </div>
     <script src="./index.js"></script>
 </body>
-</html>
 {% elsif page.usevue%}
-<!DOCTYPE html>
-<html>
 <head>
     <title>Welcome to Vue</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css">
 
-    <script src="./survey.vue.min.js"></script>
+    <script src="https://unpkg.com/survey-vue"></script>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -69,6 +89,5 @@
     </div>
     <script src="./index.js"></script>
 </body>
-</html>
 {% endif %}
 </html>
