@@ -2,17 +2,17 @@
 layout: example
 ---
 
-{% for include in page.includesHTML %}
-    {% include {{include}} %}
-{% endfor %}
+{% capture content_html %}
+    {% include {{page.contentHTML}} %}
+{% endcapture %}
 
-{% for include in page.includesJS %}
-    {% include {{include}} %}
-{% endfor %}
+{% capture content_js %}
+    {% include {{page.contentJS}} %}
+{% endcapture %}
 
-{% for include in page.includesCSS %}
-    {% include {{include}} %}
-{% endfor %}
+{% capture content_css %}
+    {% include {{page.contentCSS}} %}
+{% endcapture %}
 
 {% for include in page.includes %}
     {% include {{include}} %}

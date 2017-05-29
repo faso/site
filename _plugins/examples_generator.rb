@@ -13,17 +13,11 @@ module Jekyll
       use_platform_key = "use#{platform}"
       self.data[use_platform_key] = true
 
+      self.data['contentHTML'] = example['contentHTML']
+      self.data['contentJS'] = example['contentJS']
+      self.data['contentCSS'] = example['contentCSS']
       self.data['includes'] = example['includes'] || [
         "live-example-code.html"
-      ]
-      self.data['includesHTML'] = example['includeHTML'] || [
-        "examplesetups/standard/index.html.md"
-      ]
-      self.data['includesJS'] = example['includesJS'] || [
-        "examplesetups/standard/index.js.md"
-      ]
-      self.data['includesCSS'] = example['includesCSS'] || [
-        "examplesetups/standard/index.css.md"
       ]
 
       self.data['hasColumnCount'] = example['hasColumnCount']
