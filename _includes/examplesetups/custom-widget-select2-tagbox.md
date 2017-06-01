@@ -40,17 +40,18 @@ var widget = {
             $el.val(question.value).trigger("change");
         };
         question.valueChangedCallback = updateHandler;
+        question.choicesChangedCallback();
         updateHandler();
     }
     {% if page.useknockout %}
     {% else %}
-        ,
-        willUnmount: function(question, el) {
-            var $select = $(el).find("select").select2();
-            $select.each(function(i,item){
-              $(item).select2("destroy");
-            });
-        } 
+    ,
+    willUnmount: function(question, el) {
+        var $select = $(el).find("select").select2();
+        $select.each(function(i,item){
+            $(item).select2("destroy");
+        });
+    } 
     {% endif %}
 }
 Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
@@ -108,6 +109,7 @@ Vue.component(widget.name, {
             $(vm.$el).val(vm.question.value).trigger("change");
         }
         vm.question.valueChangedCallback = updateHandler;
+        question.choicesChangedCallback();
         updateHandler();
     },
     destroyed: function () {
