@@ -29,6 +29,7 @@ var widget = {
         var options = $el.find('option');
         for (var i=1; i<options.length; i++) {
             options[i].dataset["imgSrc"] = options[i].text;
+            options[i].selected = question.value == options[i].value;
         }
         $el.imagepicker({
             hide_select : true,
