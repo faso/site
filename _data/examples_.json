@@ -49,5 +49,8 @@
             "examplesetups/custom-navigation/description.html",
             "live-example-code.html"
         ]
+    },
+    { "name": "survey-data", "title": "Work with survey data (properties, methods and events).", "propertiesFile": "exampleproperties/data.html",
+       "contentJS": "examplesetups/survey-data/index.js.md"
     }
 ]

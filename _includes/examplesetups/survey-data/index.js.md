@@ -1,5 +1,11 @@
-{% capture survey_setup %}
-var survey = new Survey.Model({% include surveys/survey-data.json %});
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
+window.survey = new Survey.Model({% include surveys/survey-data.json %});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
+
 var data = {name:"John Doe", email: "johndoe@nobody.com", car:["Ford"]};
 var surveyValueChanged = function (sender, options) {
     var el = document.getElementById(options.name);
@@ -14,6 +20,7 @@ ReactDOM.render(<Survey.Survey model={survey} data={data} onValueChanged={survey
 {% elsif page.useknockout%}
 survey.data = data;
 survey.onValueChanged.add(surveyValueChanged);
+survey.render("surveyElement");
 
 {% elsif page.useangular%}
 function onAngularComponentInit() {
@@ -43,7 +50,3 @@ survey.data = data;
 survey.onValueChanged.add(surveyValueChanged);
 
 {% endif %}
-
-{% endcapture %}
-
-{% include live-example-code.html %}
