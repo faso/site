@@ -1,8 +1,31 @@
-[    
+[
+    { "name": "questiontype-checkbox", "title": "One choice - checkbox (type:'checkbox')", "hasColumnCount": true, "propertiesFile": "exampleproperties/selectbase.html",
+        "includes": [
+            "live-example-code.html",
+            "demo-selectbase-choices.html"
+        ]
+    },
+    { "name": "questiontype-comment", "title": "Comment (type:'comment')", "propertiesFile": "exampleproperties/comment.html" },
+    { "name": "questiontype-dropdown", "title": "One choice - dropdown (type:'dropdown')", "propertiesFile": "exampleproperties/selectbase.html",
+        "includes": [
+            "live-example-code.html",
+            "demo-selectbase-choices.html"
+        ]
+    },
+    { "name": "questiontype-dropdownrestfull", "title": "One choice - dropdown (type:'dropdown'). Get the choices from a restfull service.", "propertiesFile": "exampleproperties/choicesrestfull.html" },
+    { "name": "questiontype-file", "title": "File uploading (type:'file')", "propertiesFile": "exampleproperties/file.html" },
+    { "name": "questiontype-panel", "title": "Panel container", "propertiesFile": "exampleproperties/panel.html", "contentJS": "examplesetups/panel/index.js.md" },
+    { "name": "questiontype-html", "title": "Use html elements inside your survey (type:'html')", "propertiesFile": "exampleproperties/html.html" },
+    { "name": "questiontype-matrix", "title": "Matrix (type:'matrix')", "propertiesFile": "exampleproperties/questionmatrix.html" },
+    { "name": "questiontype-matrixdropdown", "title": "Matrix with multiple choices (type:'matrixdropdown')" },
+    { "name": "questiontype-matrixdynamic", "title": "Matrix with dynamic rows (type:'matrixdynamic')" },
+    { "name": "questiontype-multipletext", "title": "Multiple Text (type:'multipletext')" },
     { "name": "questiontype-radiogroup", "title": "One choice - radio group (type:'radiogroup')", "hasColumnCount": true, "propertiesFile": "exampleproperties/selectbase.html",
         "includes": [
             "live-example-code.html",
             "demo-selectbase-choices.html"
         ]
-    }
+    },
+    { "name": "questiontype-rating", "title": "Rating (type:'rating')", "propertiesFile": "exampleproperties/rating.html" },
+    { "name": "questiontype-text", "title": "Text (type:'text')", "propertiesFile": "exampleproperties/questiontext.html" }
 ]
