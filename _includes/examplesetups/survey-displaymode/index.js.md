@@ -1,8 +1,15 @@
-{% capture survey_setup %}
-var survey = new Survey.Model({% include {{page.dataFile}} %});
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
+window.survey = new Survey.Model({% include {{page.dataFile}} %});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
+
 survey.mode = "display";
 var data =  {"Quality":{"affordable":"3","does what it claims":"4","better then others":"3","easy to use":"5"},"satisfaction":"4","recommend friends":"4","suggestions":"24/7 support would help a lot.","price to competitors":"Not sure","price":"correct","pricelimit":{"mostamount":"450","leastamount":"200"},"email":"jon.snow@nightwatch.org"};
 survey.data = data;
+
 {% if page.usereact %}
 ReactDOM.render(<Survey.Survey model={survey} />, document.getElementById("surveyElement"));
 {% elsif page.useknockout%}
@@ -22,4 +29,3 @@ var app = new Vue({
     }
 });
 {% endif %}
-{% endcapture %}

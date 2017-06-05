@@ -51,6 +51,9 @@
         ]
     },
     { "name": "survey-data", "title": "Work with survey data (properties, methods and events).", "propertiesFile": "exampleproperties/data.html",
-       "contentJS": "examplesetups/survey-data/index.js.md"
+        "contentJS": "examplesetups/survey-data/index.js.md"
+    },
+    { "name": "survey-displaymode", "title": "View survey results of other people in read-only/display mode", "dataFile": "surveys/real-productfeedback.json",
+        "contentJS": "examplesetups/survey-displaymode/index.js.md"
     }
 ]
