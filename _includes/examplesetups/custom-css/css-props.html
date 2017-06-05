@@ -1,0 +1,12 @@
+<div>
+    <p />
+    <p>Set the css property to override the required css class(s).</p>
+    <p>
+    Currently you may override the following css classes:
+    </p>
+    <textarea id="surveyClasses" style="width:100%" rows="20"></textarea>
+</div>
+<script type="text/javascript">
+    var css = Survey.defaultBootstrapCss;
+    document.getElementById('surveyClasses').value = JSON.stringify(css, null, '\t');
+</script>
