@@ -111,5 +111,6 @@
     { "name": "validators-server", "title": "Example of using onServerValidateQuestions callback",
         "contentHTML": "examplesetups/validators-server/index.html.md",
         "contentJS": "examplesetups/validators-server/index.js.md"
-    }
+    },
+    { "name": "validators-standard", "title": "Standard validators" }
 ]
