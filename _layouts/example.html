@@ -18,7 +18,14 @@ mainmenukey: examples
             <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
                 <div>
                     <button onclick="restartIFrame()">Rerun Survey</button>
+                    <button onclick="editInPlunker()">Edit in Plunker</button>
                 </div>
+
+                <form id="plnkrForm" style="display:none" method="post" action="https://plnkr.co/edit/?p=preview" target="_blank'">
+                    <input type="hidden" name="tags[0]" value="surveyjs">
+                    <input type="hidden" name="private" value="true">
+                    <input type="hidden" name="description" value="surveyjs example">
+                </form>
                 
                 <div class="survey-container">
                     <iframe src="./content" class="display-example-iframe" frameborder="0" width="100%" onload="onLoadIFrame(this)"></iframe>
@@ -46,6 +53,33 @@ mainmenukey: examples
         function restartIFrame() {
             var iframe = document.querySelector('.display-example-iframe');
             iframe.src = iframe.src;
+        }
+
+        function editInPlunker() {
+            var form = document.querySelector("#plnkrForm");
+            var htmlContent = document.querySelector(".content-html");
+            var jsContent = document.querySelector(".content-js");
+            var cssContent = document.querySelector(".content-css");
+
+            var files = [
+                { name: 'index.html', value: htmlContent.textContent },
+                { name: 'index.js', value: jsContent.textContent },
+                { name: 'index.css', value: cssContent.textContent }
+            ];
+
+            function addInput(file) {
+                var input = document.createElement("input");
+                input.setAttribute("type", "hidden");
+                input.setAttribute("name", "files[" + file.name + "]");
+                input.setAttribute("value", file.value);
+                form.appendChild(input);
+            }
+            
+            for (var i = 0; i < files.length; i++) {
+                addInput(files[i]);
+            }
+
+            form.submit();
         }
     </script>
 </div>
