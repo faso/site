@@ -46,8 +46,8 @@
         "contentJS": "examplesetups/custom-navigation/index.js.md",
         "contentCSS": "examplesetups/custom-navigation/index.css.md",
         "includes": [
-            "live-example-code.html",
-            "examplesetups/custom-navigation/description.html"
+            "examplesetups/custom-navigation/description.html",
+            "live-example-code.html"
         ]
     }
 ]
