@@ -26,6 +26,3 @@ $("#surveyElement").Survey({model:survey});
 
 {% include live-example-code.html %}
 
-<div class="jumbotron">
-<p>As you see all string properties can be represented as a json object, where key is a locale. If there is no translation for the selected locale then the 'default' value is used, or the first one, if default doesn't exist as well.</p>
-</div>

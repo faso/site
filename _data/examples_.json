@@ -57,9 +57,15 @@
         "contentJS": "examplesetups/survey-displaymode/index.js.md"
     },
     { "name": "survey-localization", "title": "Localize your survey", "propertiesFile": "exampleproperties/localization.html",
-        "contentJS": "examplesetups/localization/index.js.md",
+        "contentJS": "examplesetups/survey-localization/index.js.md",
         "includes": [
-            "examplesetups/localization/description.html",
+            "examplesetups/survey-localization/description.html",
+            "live-example-code.html"
+        ]
+    },
+    { "name": "survey-multilanguages", "title": "Create a survey with multi languages support", "propertiesFile": "exampleproperties/multilanguages.html",
+        "includes": [
+            "examplesetups/survey-multilanguages/description.html",
             "live-example-code.html"
         ]
     }
