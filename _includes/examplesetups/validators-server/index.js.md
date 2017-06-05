@@ -1,7 +1,12 @@
-{% capture survey_setup %}
-var survey = new Survey.Model({
-        questions: [{ type: "text", name: "country", title: "Type a country:" }]
-    });
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
+window.survey = new Survey.Model({
+    questions: [{ type: "text", name: "country", title: "Type a country:" }]
+});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
 
 //assign call to onServerValidateQuestions callback
 function surveyValidateQuestion(survey, options) {
@@ -26,13 +31,14 @@ function surveyValidateQuestion(survey, options) {
         options.complete();
     });
 }
-    
+
 {% if page.usereact %}
 ReactDOM.render(<Survey.Survey model={survey} onServerValidateQuestions={surveyValidateQuestion} />, document.getElementById("surveyElement"));    
 
 {% elsif page.useknockout%}
 //assign call to onServerValidateQuestions callback
 survey.onServerValidateQuestions = surveyValidateQuestion
+survey.render("surveyElement");
 
 {% elsif page.useangular%}
 function onAngularComponentInit() {
@@ -54,7 +60,3 @@ survey.onServerValidateQuestions = surveyValidateQuestion
 var app = new Vue({ el: '#surveyElement', data: { survey: survey } });
 
 {% endif %}
-
-{% endcapture %}
-
-{% include live-example-code.html %}

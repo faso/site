@@ -107,5 +107,9 @@
     { "name": "real-medical-service", "title": "Medical Service Feedback", "propertiesFile": "exampleproperties/multilanguages.html" },
 
     { "name": "validators-custom", "title": "Create custom validator", "contentJS": "examplesetups/validators-custom/index.js.md" },
-    { "name": "validators-event", "title": "Example of using onValidateQuestion event", "contentJS": "examplesetups/validators-event/index.js.md" }
+    { "name": "validators-event", "title": "Example of using onValidateQuestion event", "contentJS": "examplesetups/validators-event/index.js.md" },
+    { "name": "validators-server", "title": "Example of using onServerValidateQuestions callback",
+        "contentHTML": "examplesetups/validators-server/index.html.md",
+        "contentJS": "examplesetups/validators-server/index.js.md"
+    }
 ]
