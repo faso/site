@@ -27,5 +27,65 @@
         ]
     },
     { "name": "questiontype-rating", "title": "Rating (type:'rating')", "propertiesFile": "exampleproperties/rating.html" },
-    { "name": "questiontype-text", "title": "Text (type:'text')", "propertiesFile": "exampleproperties/questiontext.html" }
+    { "name": "questiontype-text", "title": "Text (type:'text')", "propertiesFile": "exampleproperties/questiontext.html" },
+
+
+
+
+
+    { "name": "survey-autonextpage", "title": "Go to the next page automatically", "propertiesFile": "exampleproperties/autonextpage.html" },
+    { "name": "survey-cookie", "disablereRun": true, "title": "Use cookie to run servey one time in a browser.", "propertiesFile": "exampleproperties/survey-cookie.html"},
+    { "name": "survey-customcss", "title": "Custom css",
+        "includes": [
+            "examplesetups/custom-css.md"
+        ]
+    },
+    { "name": "survey-customnavigation", "title": "Custom navigation", "propertiesFile": "exampleproperties/customnavigation.html", "preSurvey": "survey-custombuttons.html",
+        "includes": [
+            "examplesetups/custom-navigation.md"
+        ]
+    },
+    { "name": "survey-customtemplate", "title": "Change the template for checkbox and radiogroup questions. Use bootstrap buttons group.",
+        "includes": [
+            "examplesetups/custom-template.md"
+        ]
+    },
+    { "name": "survey-data", "title": "Work with survey data (properties, methods and events).", "propertiesFile": "exampleproperties/data.html",
+        "includes": [
+            "examplesetups/data.md"
+        ]
+    },
+    { "name": "survey-displaymode", "title": "View survey results of other people in read-only/display mode", "dataFile": "surveys/real-productfeedback.json",
+        "includes": [
+            "examplesetups/displaymode.md",
+            "live-example-code.html"
+        ]
+    },
+    { "name": "survey-localization", "title": "Localize your survey", "propertiesFile": "exampleproperties/localization.html",
+        "includes": [
+            "examplesetups/localization.md"
+        ]
+    },
+    { "name": "survey-multilanguages", "title": "Create a survey with multi languages support", "propertiesFile": "exampleproperties/multilanguages.html",
+        "includes": [
+            "examplesetups/multilanguages.md"
+        ]
+    },
+    { "name": "survey-options", "title": "Use properties to set up your survey", "propertiesFile": "exampleproperties/options.html",
+        "includes": [
+            "examplesetups/options.md"
+        ]
+    },
+    { "name": "survey-markdown-matrix", "title": "Use markdown to render column title in several lines", 
+        "includes": [
+            "examplesetups/markdown-matrix.md"
+        ]
+    },
+    { "name": "survey-markdown-radiogroup", "title": "Use markdown to render images in title and question elements", 
+        "includes": [
+            "examplesetups/markdown-radiogroup.md"
+        ]
+    },
+    { "name": "survey-processtext", "title": "Pre-process question and page titles, and html properties. Use survey properties to change the templates.", "propertiesFile": "exampleproperties/processtext.html" },
+    { "name": "survey-startwithnewline", "title": "Show several questions in one line/row.", "propertiesFile": "exampleproperties/startwithnewline.html" }
 ]
