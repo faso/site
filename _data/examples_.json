@@ -72,5 +72,13 @@
     { "name": "survey-options", "title": "Use properties to set up your survey", "propertiesFile": "exampleproperties/options.html",
         "contentJS": "examplesetups/survey-options/index.js.md",
         "contentCSS": "examplesetups/survey-options/index.css.md"
+    },
+    { "name": "markdown-matrix", "title": "Use markdown to render column title in several lines", 
+        "contentHTML": "examplesetups/markdown-matrix/index.html.md",
+        "contentJS": "examplesetups/markdown-matrix/index.js.md",
+        "includes": [
+            "examplesetups/markdown-matrix/description.html",
+            "live-example-code.html"
+        ]
     }
 ]
