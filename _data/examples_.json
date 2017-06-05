@@ -1,8 +1,5 @@
 [    
     { "name": "questiontype-radiogroup", "title": "One choice - radio group (type:'radiogroup')", "hasColumnCount": true, "propertiesFile": "exampleproperties/selectbase.html",
-        "contentHTML": "examplesetups/standard/index.html.md",
-        "contentJS": "examplesetups/standard/index.js.md",
-        "contentCSS": "examplesetups/standard/index.css.md",
         "includes": [
             "live-example-code.html",
             "demo-selectbase-choices.html"
