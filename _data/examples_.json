@@ -88,5 +88,9 @@
             "examplesetups/markdown-radiogroup/description.html",
             "live-example-code.html"
         ]
-    }
+    },
+    { "name": "survey-processtext", "title": "Pre-process question and page titles, and html properties. Use survey properties to change the templates.",
+        "propertiesFile": "exampleproperties/processtext.html" 
+    },
+    { "name": "survey-startwithnewline", "title": "Show several questions in one line/row.", "propertiesFile": "exampleproperties/startwithnewline.html" }
 ]
