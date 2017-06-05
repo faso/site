@@ -80,5 +80,13 @@
             "examplesetups/markdown-matrix/description.html",
             "live-example-code.html"
         ]
+    },
+    { "name": "survey-markdown-radiogroup", "title": "Use markdown to render images in title and question elements", 
+        "contentHTML": "examplesetups/markdown-radiogroup/index.html.md",
+        "contentJS": "examplesetups/markdown-radiogroup/index.js.md",
+        "includes": [
+            "examplesetups/markdown-radiogroup/description.html",
+            "live-example-code.html"
+        ]
     }
 ]

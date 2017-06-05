@@ -1,6 +1,11 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.6.4/showdown.min.js"></script>
-{% capture survey_setup %}
-var survey = new Survey.Model({% include surveys/markdown-radiogroup.json %});
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
+
+window.survey = new Survey.Model({% include surveys/markdown-radiogroup.json %});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
+
 //Create showdown mardown converter
 var converter = new showdown.Converter();
 survey.onTextMarkdown.add(function(survey, options){
@@ -15,22 +20,15 @@ survey.onTextMarkdown.add(function(survey, options){
 
 {% if page.usereact %}
 ReactDOM.render(<Survey.Survey model={survey} />, document.getElementById("surveyElement"));
-
 {% elsif page.useknockout%}
-
+survey.render("surveyElement");
 {% elsif page.useangular%}
 function onAngularComponentInit() {
-    Survey.SurveyNG.render("surveyElement", {
-        model:survey
-    });
+    Survey.SurveyNG.render("surveyElement", {model:survey});
 }
 {% include examplesetups/angular-example-component.md %}
-
 {% elsif page.usejquery%}
-$("#surveyElement").Survey({
-    model: survey,
-});
-
+$("#surveyElement").Survey({model:survey});
 {% elsif page.usevue%}
 var app = new Vue({
     el: '#surveyElement',
@@ -38,13 +36,4 @@ var app = new Vue({
         survey: survey
     }
 });
-
 {% endif %}
-
-{% endcapture %}
-
-{% include live-example-code.html %}
-
-<div class="jumbotron">
-<p>SurveyJS supports markdown via onTextMarkDown event. You may use any JavaScript markdown library. In this example, we are using <a href="https://github.com/showdownjs/showdown">Showdown markdown</a>. You may use all features that this or other libraries have.</p>
-</div>
