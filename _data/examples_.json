@@ -68,5 +68,9 @@
             "examplesetups/survey-multilanguages/description.html",
             "live-example-code.html"
         ]
+    },
+    { "name": "survey-options", "title": "Use properties to set up your survey", "propertiesFile": "exampleproperties/options.html",
+        "contentJS": "examplesetups/survey-options/index.js.md",
+        "contentCSS": "examplesetups/survey-options/index.css.md"
     }
 ]

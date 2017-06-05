@@ -1,0 +1,21 @@
+.btn-green {
+  background-color: #1ab394;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-green:hover, .btn-green:focus {
+    background-color: #18a689;
+    color: #fff;
+}
+
+.panel-footer {
+    text-align: right;
+    background-color: #fff;
+}
+
+.bar-green {
+  background-color: #1ab394;
+  color: #fff;
+  padding-left: 10px;
+}
