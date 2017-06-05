@@ -1,28 +1,11 @@
-{% if page.useknockout or page.usevue %}
-<p>Use 
-{% if page.useknockout %}
-onRedered event to initialized your custom navigation and 
-{% endif %}
-onCurrentPageChanged event to update it after the current page is changed.</p>
-<pre class="brush:js">
-{% if page.useknockout %}
-survey.onRendered.add(function (sender) {
-    var survey = sender;
-    //Your code
-});
-{% endif %}
-survey.onCurrentPageChanged.add(function (sender, options) {
-    var survey = sender;
-    var oldCurrentPage = options.oldCurrentPage;
-    var newCurrentPage = options.newCurrentPage;
-    //Your code
-});
-</pre>
-{% endif %}
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
-{% capture survey_setup %}
-var survey = new Survey.Model({% include surveys/survey-severalpages.json %});
+window.survey = new Survey.Model({% include surveys/survey-severalpages.json %});
 survey.showTitle = false;
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+});
 
 function doOnCurrentPageChanged(survey) {
     document.getElementById('surveyPrev').style.display = !survey.isFirstPage ? "inline" : "none";
@@ -39,6 +22,7 @@ doOnCurrentPageChanged(survey);
 {% elsif page.useknockout %}
 survey.onRendered.add(doOnCurrentPageChanged);
 survey.onCurrentPageChanged.add(doOnCurrentPageChanged);
+survey.render("surveyElement");
 
 {% elsif page.useangular %}
 function onAngularComponentInit() {
@@ -63,7 +47,3 @@ new Vue({ el: '#surveyElement', data: { survey: survey } });
 doOnCurrentPageChanged(survey);
 
 {% endif %}
-
-{% endcapture %}
-
-{% include live-example-code.html %}

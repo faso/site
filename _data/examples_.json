@@ -40,5 +40,14 @@
             "live-example-code.html",
             "examplesetups/custom-css/css-props.html"
         ]
+    },
+    { "name": "survey-customnavigation", "title": "Custom navigation", "propertiesFile": "exampleproperties/customnavigation.html", "preSurvey": "survey-custombuttons.html",
+        "contentHTML": "examplesetups/custom-navigation/index.html.md",
+        "contentJS": "examplesetups/custom-navigation/index.js.md",
+        "contentCSS": "examplesetups/custom-navigation/index.css.md",
+        "includes": [
+            "live-example-code.html",
+            "examplesetups/custom-navigation/description.html"
+        ]
     }
 ]
