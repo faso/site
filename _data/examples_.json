@@ -55,5 +55,12 @@
     },
     { "name": "survey-displaymode", "title": "View survey results of other people in read-only/display mode", "dataFile": "surveys/real-productfeedback.json",
         "contentJS": "examplesetups/survey-displaymode/index.js.md"
+    },
+    { "name": "survey-localization", "title": "Localize your survey", "propertiesFile": "exampleproperties/localization.html",
+        "contentJS": "examplesetups/localization/index.js.md",
+        "includes": [
+            "examplesetups/localization/description.html",
+            "live-example-code.html"
+        ]
     }
 ]
