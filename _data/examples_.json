@@ -94,6 +94,14 @@
 
 
 
+    { "name": "condition-kids", "title": "Write an expression in 'visibleIf' to show/hide your question(s)",
+        "hasColumnCount": true, "propertiesFile": "exampleproperties/condition-kids.html" },
+    { "name": "trigger-complete", "title": "Complete Trigger - finishes the survey.", "propertiesFile": "exampleproperties/completetrigger.html", "dataFile": "surveys/trigger-complete.json" },
+    { "name": "trigger-setvalue", "title": "SetValue Trigger - on changing the question, change values of other questions.", "dataFile": "surveys/trigger-setvalue.json" },
+    { "name": "trigger-visible", "title": "Visible Trigger - Show/Hide question(s) on survey running.", "propertiesFile": "exampleproperties/visibletrigger.html", "dataFile": "surveys/trigger-visible.json" },
+
+
+
     { "name": "real-devexpresswinformsskins", "title": "DevExpress WinForms Look & Feel Technology" },
     { "name": "real-productfeedback", "title": "Product Feedback survey" },
     { "name": "real-medical-service", "title": "Medical Service Feedback", "propertiesFile": "exampleproperties/multilanguages.html" }
