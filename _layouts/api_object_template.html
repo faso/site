@@ -33,18 +33,18 @@ mainmenukey: doc
                             <img data-bind="visible: pmeType =='method'" src='../images/method_12.svg' width='20px' />
                             <img data-bind="visible: pmeType =='event'" src='../images/bell.svg' width='20px' />
                         </td>
-                        <td>
-                            <a data-bind="click:showHide"><span data-bind="text: name"></span></a>
-                            <span data-bind="text: pmeType"></span>
-                        </td>
-                        <td>
+                        <td style="padding-right:10px">
                             <a href="#" data-bind="click: showHide" title="More Info...">
                                 <span class="glyphicon" data-bind="css: {'glyphicon-chevron-down': !koExpanded(), 'glyphicon-chevron-up': koExpanded}"></span>
                             </a>
                         </td>
+                        <td style="width:100%">
+                            <a data-bind="click:showHide"><span data-bind="text: name"></span></a>
+                            <span data-bind="text: pmeType"></span>
+                        </td>
                     </tr>
                     <tr data-bind="visible: koExpanded">
-                        <td style="border-top-style:none"></td>
+                        <td style="border-top-style:none" colspan="2"></td>
                         <td style="border-top-style:none">
                             <div>
                                 <span>Type: </span><span data-bind="text:type"></span><span> </span><b><span data-bind="visible: pmeType =='property', text: propertySet"></span></b>
@@ -62,29 +62,29 @@ mainmenukey: doc
                                 <!-- /ko -->
                             </div>
                             <div data-bind="visible: hasDocumentation, html: documentation"></div>
+                            <div data-bind="visible: hasParameters">
+                                <p>
+                                    <h5>Parameters:</h5>
+                                    <div data-bind="foreach: parameters">
+                                        <div><span data-bind="text:name"></span><span>, type: </span><span data-bind="text:type"></span><span data-bind="visible: hasDocumentation">, </span><span data-bind="visible: hasDocumentation, html:documentation"></span>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
                             <div>
                                 <span>Implemented in: </span>
                                 <!-- ko foreach: implemetedIn -->
                                 <a data-bind="attr: {href: href}"><span data-bind="text: name"></span></a>
                                 <!-- /ko -->
                             </div>
-                            <div data-bind="visible: linkToPropertyFile.length > 0">
-                                <a data-bind="attr: {href: linkToPropertyFile}"><span>Show more</span></a>
-                            </div>
-                        </td>
-                        <td style="border-top-style:none">
-                            <div data-bind="visible: hasParameters">
-                                <h5>Parameters:</h5>
-                                <div data-bind="foreach: parameters">
-                                    <div><span>Name: </span><span data-bind="text:name"></span><span>, type: </span><span data-bind="text:type"></span></div>
-                                    <div data-bind="visible: hasDocumentation"><span>Documentation: </span><span data-bind="html:documentation"></span></div>
-                                </div>
-                            </div>
                             <div data-bind="visible: seeAlso.length > 0">
                                 <span>See also: </span>
                                 <!-- ko foreach: seeAlso -->
                                 <a data-bind="attr: {href: href}"><span data-bind="text: name"></span></a>
                                 <!-- /ko -->
+                            </div>
+                            <div data-bind="visible: linkToPropertyFile.length > 0">
+                                <a data-bind="attr: {href: linkToPropertyFile}"><span>Show more</span></a>
                             </div>
                         </td>
                     </tr>
@@ -106,7 +106,7 @@ mainmenukey: doc
     var curClass = {
     {% for classItem in site.data.classes %}{% if classItem.name == page.classname %}
         {% assign curClass = classItem %}
-        name: "{{classItem.name}}", documentation: {{classItem.documentation | markdownify | jsonify  }}, allTypes: {{classItem.allTypes | jsonify  }}
+        name: "{{classItem.name}}", documentation: {{classItem.documentation | markdownify | jsonify }}, allTypes: {{classItem.allTypes | jsonify  }}
     {% endif %}{% endfor %}
     };
     var pmes = [
@@ -117,11 +117,11 @@ mainmenukey: doc
     {% if hasPropertyFile == "true" %}
         {% assign propertyFileName = '/docs/' | append:  prop.className | append:  '/' | append: prop.name | append:  '.html' %}
     {% endif %}
-    { name: "{{prop.name}}", className: "{{prop.className}}", type: "{{prop.type}}", pmeType: "{{prop.pmeType}}", "href": "{{ page.pathprefix }}{{prop.className}}/{{prop.name}}.html", isSerialized: "{{prop.isSerialized}}", defaultValue: {{ prop.defaultValue| jsonify  }},serializedChoices:  {{ prop.serializedChoices| jsonify  }}, documentation: {{ prop.documentation| markdownify | jsonify  }}, hasSet: "{{prop.hasSet}}",
+    { name: "{{prop.name}}", className: "{{prop.className}}", type: "{{prop.type}}", pmeType: "{{prop.pmeType}}", "href": "{{ page.pathprefix }}{{prop.className}}/{{prop.name}}.html", isSerialized: "{{prop.isSerialized}}", defaultValue: {{ prop.defaultValue| jsonify  }},serializedChoices:  {{ prop.serializedChoices| jsonify  }}, documentation: {{ prop.documentation| markdownify | jsonify }}, hasSet: "{{prop.hasSet}}",
         linkToPropertyFile: "{{propertyFileName}}",
         parameters:  [
             {% for par in prop.parameters %}
-            { name: "{{par.name}}", documentation: {{par.documentation | markdownify | jsonify}}, type: "{{par.type}}" }{% if forloop.last == false %},{% endif %} 
+            { name: "{{par.name}}", documentation: {{par.documentation | markdownify | jsonify | remove: '<p>' | remove: '</p>'}}, type: "{{par.type}}" }{% if forloop.last == false %},{% endif %} 
             {% endfor %}        
         ],
         see:  [{% for par in prop.see %} "{{par}}" {% if forloop.last == false %},{% endif %} {% endfor %}]}{% if forloop.last == false %},{% endif %} 
@@ -179,7 +179,7 @@ mainmenukey: doc
             }
         }
         this.hasParameters = this.parameters.length > 0;
-        this.hasSet = item.hasSet == "true";
+        this.hasSet = item.hasSet !== "false";
         this.propertySet = this.hasSet ? " writable" : " readonly";
         this.isSerialized = item.isSerialized == "true";
         this.koExpanded = ko.observable(false);

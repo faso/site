@@ -15,23 +15,37 @@ var survey = new Survey.Model({
 {% if page.usevue != true %}
 var widget = {
     name: "datepicker",
-    htmlTemplate: "<input id='widget-datepicker' type='text' style='width: 100%;'>",
-    isFit : function(question) { return question.name == 'date'; },
+    htmlTemplate: "<input class='widget-datepicker' type='text' style='width: 100%;'>",
+    isFit: function(question) {
+        return question.getType() === 'text' && question.inputType === 'date';
+    },
     afterRender: function(question, el) {
+        var $el;
 {% if page.useknockout %}
-        var widget = $(el).datepicker({dateFormat: question.dateFormat});
+        $el = $(el);
 {% else %}
-        var widget = $(el).find('#widget-datepicker').datepicker({dateFormat: question.dateFormat});
+        $el = $(el).find('.widget-datepicker');
 {% endif %}
-        widget.on("change", function (e) {
-            question.value = $(this).val();
+        var widget = $el.datepicker({
+            dateFormat: question.dateFormat,
+            onSelect: function(dateText) {
+                question.value = dateText;
+            }
         });
         question.valueChangedCallback = function() {
             widget.datepicker('setDate', new Date(question.value));
         }
-        widget.datepicker('setDate', new Date(question.value || Date.now));
+        question.valueChangedCallback();
+    },
+    willUnmount: function(question, el) {
+{% if page.useknockout %}
+        $(el).datepicker("destroy");
+{% else %}
+        $(el).find('.widget-datepicker').datepicker("destroy");
+{% endif %}
     }
 }
+
 Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
 {% endif %}
 
@@ -61,12 +75,14 @@ var widget = {
 
 Vue.component(widget.name, {
     props: ['question', 'css', 'isEditMode'],
-    template: "<input id='widget-datepicker' type='text' style='width: 100%;'>",
+    template: "<input class='widget-datepicker' type='text' style='width: 100%;'>",
     mounted: function () {
         var vm = this
-        var widget = $(vm.$el).datepicker({dateFormat: vm.question.dateFormat});
-        widget.on("change", function (e) {
-            vm.question.value = $(this).val();
+        var widget = $(vm.$el).datepicker({
+            dateFormat: vm.question.dateFormat,
+            onSelect: function(dateText) {
+                vm.question.value = dateText;
+            }
         });
         vm.question.valueChangedCallback = function() {
             widget.datepicker('setDate', new Date(vm.question.value));
@@ -74,7 +90,7 @@ Vue.component(widget.name, {
         widget.datepicker('setDate', new Date(vm.question.value || Date.now));
     },
     destroyed: function () {
-        $(this.$el).off().remove();
+        $(this.$el).datepicker("destroy");
     }
 })
 Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
