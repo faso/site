@@ -1,8 +1,8 @@
 <div>HTML</div>
-<pre><code class="language-html">{{ content_html + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
+<pre><code class="content-html language-html">{{ content_html + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
 
 <div>JavsScript</div>
-<pre><code class="language-javascript">{{ content_js + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
+<pre><code class="content-js language-javascript">{{ content_js + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
 
 <div>CSS</div>
-<pre><code class="language-css">{{ content_css + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
+<pre><code class="content-css language-css">{{ content_css + '</script>' | replace:'/*<![CDATA[*/','' | replace:'/*]]>*/','' | escape }}</code></pre>
