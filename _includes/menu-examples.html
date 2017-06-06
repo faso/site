@@ -7,7 +7,8 @@
             {% assign activecategory = category.name %}
         {% endif %}
     {% endfor %}    
-{% endfor %}    
+{% endfor %}
+
 <nav class="navbar-default navbar-static-side examplesidebar" role="navigation">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
@@ -20,7 +21,20 @@
                 <ul id="examples{{category.id}}" class="nav nav-second-level"{% if category.name != activecategory%}style="display:none"{% endif%}>
                 {% for example in category.items %}
                     <li {% if example.name == activeexample%}class="active"{% endif%}>
-                        <a href="{{example.url}}">
+                        {% if page.usereact%}
+                        {% assign framework = "react/" %}
+                        {% elsif page.useknockout%}
+                        {% assign framework = "knockout/" %}
+                        {% elsif page.usejquery%}
+                        {% assign framework = "jquery/" %}
+                        {% elsif page.useangular%}
+                        {% assign framework = "angular/" %}
+                        {% elsif page.usevue%}
+                        {% assign framework = "vue/" %}
+                        {% endif %}
+                        {% assign new_url = "/examples/" | append: framework | append: example.url %}
+                        
+                        <a href="{{new_url}}">
                             <span>{{example.name}}</span>
                             <div><small>{{example.text}}</small></div>
                         </a>
