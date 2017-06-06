@@ -17,7 +17,10 @@ mainmenukey: examples
 
             <div {% if page.propertiesFile %}class="col-md-8"{%else%}class="col-md-12"{%endif%}>
                 <div>
+                    {% if page.url contains 'service-oneperuser' %}
+                    {% else %}
                     <button onclick="restartIFrame()">Rerun Survey</button>
+                    {% endif %}
                     <button onclick="editInPlunker()">Edit in Plunker</button>
                 </div>
 
