@@ -128,5 +128,12 @@
             "examplesetups/service-result/description.html",
             "live-example-code.html"
         ]
+    },
+    { "name": "service-send", "title": "Save survey result into the dxSurvey Service",
+        "contentJS": "examplesetups/service-send/index.js.md",
+        "includes": [
+            "examplesetups/service-send/description.html",
+            "live-example-code.html"
+        ]
     }
 ]
