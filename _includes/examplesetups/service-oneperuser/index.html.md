@@ -5,7 +5,7 @@
     <title>Welcome to Knockout</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
     <script src="https://unpkg.com/survey-knockout"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -30,7 +30,7 @@
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
     <script src="https://unpkg.com/survey-react"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -60,7 +60,7 @@
     <script src="https://npmcdn.com/@angular/platform-browser@2.0.0-rc.5/bundles/platform-browser.umd.js"></script>
     <script src="https://npmcdn.com/@angular/platform-browser-dynamic@2.0.0-rc.5/bundles/platform-browser-dynamic.umd.js"></script>
     <script src="https://unpkg.com/survey-angular"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -82,7 +82,7 @@
     <title>Welcome to JQuery</title>
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://unpkg.com/survey-jquery"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -105,7 +105,7 @@
     <title>Welcome to Vue</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/survey-vue"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 

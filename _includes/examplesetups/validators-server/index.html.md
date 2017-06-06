@@ -6,7 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
     <script src="https://unpkg.com/survey-knockout"></script>
     <script src="https://unpkg.com/jquery"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -23,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
     <script src="https://unpkg.com/survey-react"></script>
     <script src="https://unpkg.com/jquery"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -45,7 +45,7 @@
     <script src="https://npmcdn.com/@angular/platform-browser-dynamic@2.0.0-rc.5/bundles/platform-browser-dynamic.umd.js"></script>
     <script src="https://unpkg.com/survey-angular"></script>
     <script src="https://unpkg.com/jquery"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -59,7 +59,7 @@
     <title>Welcome to JQuery</title>
     <script src="https://unpkg.com/jquery"></script>
     <script src="https://unpkg.com/survey-jquery"></script>
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -75,7 +75,7 @@
     <script src="https://unpkg.com/survey-vue"></script>
     <script src="https://unpkg.com/jquery"></script>
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
 </head>
 
 <body>
