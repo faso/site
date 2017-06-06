@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>survey.js : Image Picker question</title>
-        <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css"/>
         <link href="/css/style.css" type="text/css" rel="stylesheet" />
         <link href="/css/main.css" type="text/css" rel="stylesheet" />
         <link href="/css/custom-checkbox.css" type="text/css" rel="stylesheet" />
@@ -655,6 +655,7 @@ var widget = {
         var options = $el.find('option');
         for (var i=1; i<options.length; i++) {
             options[i].dataset["imgSrc"] = options[i].text;
+            options[i].selected = question.value == options[i].value;
         }
         $el.imagepicker({
             hide_select : true,
@@ -748,6 +749,7 @@ var widget = {
         var options = $el.find(&#39;option&#39;);
         for (var i=1; i&lt;options.length; i++) {
             options[i].dataset[&quot;imgSrc&quot;] = options[i].text;
+            options[i].selected = question.value == options[i].value;
         }
         $el.imagepicker({
             hide_select : true,
