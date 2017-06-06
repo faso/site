@@ -112,5 +112,9 @@
         "contentHTML": "examplesetups/validators-server/index.html.md",
         "contentJS": "examplesetups/validators-server/index.js.md"
     },
-    { "name": "validators-standard", "title": "Standard validators" }
+    { "name": "validators-standard", "title": "Standard validators" },
+
+
+
+    { "name": "service-load", "title": "Load survey json from the dxSurvey Service", "contentJS": "examplesetups/service-load/index.js.md" }
 ]
