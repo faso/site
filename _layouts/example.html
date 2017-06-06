@@ -31,7 +31,7 @@ mainmenukey: examples
                 </form>
                 
                 <div class="survey-container">
-                    <iframe src="./content" class="display-example-iframe" frameborder="0" width="100%" onload="onLoadIFrame(this)" style="min-height: 100px;"></iframe>
+                    <iframe src="./content" class="display-example-iframe" frameborder="0" width="100%" onload="onLoadIFrame(this)" style="min-height: 500px;"></iframe>
                 </div>
 
                 <div class="row source-code-container">
@@ -50,7 +50,7 @@ mainmenukey: examples
         function onLoadIFrame(iframe) {
             var frameContent = iframe.contentWindow;
             window.survey = frameContent.survey;
-            iframe.height = frameContent.document.body.offsetHeight + "px";
+            //iframe.height = frameContent.document.body.offsetHeight + "px";
         }
 
         function restartIFrame() {
