@@ -1,15 +1,17 @@
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet" /> 
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
-
-{% capture survey_setup %}
 Survey.JsonObject.metaData.addProperty("dropdown", {name: "dateFormat", default: "mm/dd/yy", choices: ["mm/dd/yy", "yy-mm-dd", "d M, y", "d MM, y", "DD, d MM, yy", "'day' d 'of' MM 'in the year' yy"]});
-var survey = new Survey.Model({
+
+window.survey = new Survey.Model({
     pages: [
         { name:"page1", questions: [
             {name:"date", type:"text", inputType:"date", title: "Your favorite date:", dateFormat: "mm/dd/yy"}
         ]}
     ]
+});
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
 });
 
 {% if page.usevue != true %}
@@ -53,7 +55,7 @@ Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
 ReactDOM.render(<Survey.Survey model={survey}/>, document.getElementById("surveyElement"));
 
 {% elsif page.useknockout %}
-
+survey.render("surveyElement");
 {% elsif page.useangular %}
 function onAngularComponentInit() {
     Survey.SurveyNG.render("surveyElement", {
@@ -95,17 +97,8 @@ Vue.component(widget.name, {
 })
 Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
 new Vue({ el: '#surveyElement', data: { survey: survey } });
-
 {% endif %}
 
-
-{% endcapture %}
-
-{% if page.usereact %}
-<script type="text/babel">
-{% else %}
-<script>
-{% endif %}
 window.surveyForceUpdate = function() {
     document.getElementById("surveyElement").innerHTML = "";
 {% if page.useknockout %}
@@ -123,6 +116,3 @@ window.surveyForceUpdate = function() {
     vueApp = new Vue({ el: '#surveyElement', data: { survey: survey } });
 {% endif %}
 }
-</script>
-
-{% include live-example-code.html %}

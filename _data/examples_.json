@@ -141,9 +141,10 @@
 
     { "name": "custom-widget-tagbox", "title": "TagBox Custom Widget",
         "contentHTML": "examplesetups/custom-widget-tagbox/index.html.md",
-        "contentJS": "examplesetups/custom-widget-tagbox/index.js.md",
-        "includes": [
-            "examplesetups/custom-widget-tagbox.md"
-        ]
+        "contentJS": "examplesetups/custom-widget-tagbox/index.js.md"
+    },
+    { "name": "custom-widget-datepicker", "title": "JQuery UI Datepicker Custom Widget", "propertiesFile": "exampleproperties/datepicker.html",
+        "contentHTML": "examplesetups/custom-widget-datepicker/index.html.md",
+        "contentJS": "examplesetups/custom-widget-datepicker/index.js.md"
     }
 ]
