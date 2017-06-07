@@ -135,5 +135,15 @@
             "examplesetups/service-send/description.html",
             "live-example-code.html"
         ]
+    },
+
+
+
+    { "name": "custom-widget-tagbox", "title": "TagBox Custom Widget",
+        "contentHTML": "examplesetups/custom-widget-tagbox/index.html.md",
+        "contentJS": "examplesetups/custom-widget-tagbox/index.js.md",
+        "includes": [
+            "examplesetups/custom-widget-tagbox.md"
+        ]
     }
 ]

@@ -1,11 +1,16 @@
+Survey.Survey.cssType = "bootstrap";
+Survey.defaultBootstrapCss.navigationButton = "btn btn-green";
 
-{% capture survey_setup %}
-var survey = new Survey.Model({
+window.survey = new Survey.Model({
     pages: [
         { name:"page1", questions: [
             { type: "checkbox", isRequired:true, choicesByUrl: { url: "https://restcountries.eu/rest/v1/all" }, name: "countries", title: "Please select all countries you have been for the last 3 years." }
         ]}
     ]
+});
+
+survey.onComplete.add(function(result) {
+	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
 });
 
 {% if page.usereact %}
@@ -154,8 +159,3 @@ Survey.CustomWidgetCollection.Instance.addCustomWidget(widget);
 new Vue({ el: '#surveyElement', data: { survey: survey } });
 
 {% endif %}
-
-
-{% endcapture %}
-
-{% include live-example-code.html %}
